@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html style="height:100%" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,12 +19,12 @@
             </style>
         @endif
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div style="display:flex; flex-direction: column; ">
-        <div id="jokers" style="display:flex; flex-direction:column; justify-content:space-between;">
+    <body style="height:100%" class="font-sans antialiased dark:bg-black dark:text-white/50">
+    <div style="display:flex; flex-direction: column; justify-content:space-between;height:100%;">
+        <div id="jokers" style="display:flex; flex-direction:row; justify-content:space-between;height:30%;">
 
         </div>
-        <div id="hand" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div id="hand" style="display:flex; flex-direction:row; justify-content:space-between;height:30%;">
             
         </div>
     </div>    
@@ -33,12 +33,486 @@
         
 
 
-<script>
+<script defer>
+    function GG() {
+        let f = [
+            "Ah","Kh","Qh","Jh","10h","9h","8h","7h","6h","5h","4h","3h","2h",
+            "Ad","Kd","Qd","Jd","10d","9d","8d","7d","6d","5d","4d","3d","2d",
+            "As","Ks","Qs","Js","10s","9s","8s","7s","6s","5s","4s","3s","2s",
+            "Ac","Kc","Qc","Jc","10c","9c","8c","7c","6c","5c","4c","3c","2c",
+        ]
+        return f.map(card=>{
+            card = [card,[]];
+            rank = card[0][0]=="1"?"10":card[0][0];
+            number = rank!="A"&&rank!="K"&&rank!="Q"&&rank!="J"
+            face = rank=="K"||rank=="Q"||rank=="J"
+            even = number && Number(rank)%2 == 0
+            odd = rank == "A" || ( number && Number(rank)%2 == 1 )
+            color = card[0][card[0].length-1];
+
+            card[1].push(rank)
+            card[1].push(color)
+            if (number) card[1].push("number")
+            if (face) card[1].push("face")
+            if (even) card[1].push("even")
+            if (odd) card[1].push("odd")
+
+            return card;
+        })
+    }
     const FullDeck = [
-        ["Ah"],"Kh","Qh","Jh","10h","9h","8h","7h","6h","5h","4h","3h","2h",
-        "Ad","Kd","Qd","Jd","10d","9d","8d","7d","6d","5d","4d","3d","2d",
-        "As","Ks","Qs","Js","10s","9s","8s","7s","6s","5s","4s","3s","2s",
-        "Ac","Kc","Qc","Jc","10c","9c","8c","7c","6c","5c","4c","3c","2c",
+        [
+            "Ah",
+            [
+                "A",
+                "h",
+                "odd"
+            ]
+        ],
+        [
+            "Kh",
+            [
+                "K",
+                "h",
+                "face"
+            ]
+        ],
+        [
+            "Qh",
+            [
+                "Q",
+                "h",
+                "face"
+            ]
+        ],
+        [
+            "Jh",
+            [
+                "J",
+                "h",
+                "face"
+            ]
+        ],
+        [
+            "10h",
+            [
+                "10",
+                "h",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "9h",
+            [
+                "9",
+                "h",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "8h",
+            [
+                "8",
+                "h",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "7h",
+            [
+                "7",
+                "h",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "6h",
+            [
+                "6",
+                "h",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "5h",
+            [
+                "5",
+                "h",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "4h",
+            [
+                "4",
+                "h",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "3h",
+            [
+                "3",
+                "h",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "2h",
+            [
+                "2",
+                "h",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "Ad",
+            [
+                "A",
+                "d",
+                "odd"
+            ]
+        ],
+        [
+            "Kd",
+            [
+                "K",
+                "d",
+                "face"
+            ]
+        ],
+        [
+            "Qd",
+            [
+                "Q",
+                "d",
+                "face"
+            ]
+        ],
+        [
+            "Jd",
+            [
+                "J",
+                "d",
+                "face"
+            ]
+        ],
+        [
+            "10d",
+            [
+                "10",
+                "d",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "9d",
+            [
+                "9",
+                "d",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "8d",
+            [
+                "8",
+                "d",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "7d",
+            [
+                "7",
+                "d",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "6d",
+            [
+                "6",
+                "d",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "5d",
+            [
+                "5",
+                "d",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "4d",
+            [
+                "4",
+                "d",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "3d",
+            [
+                "3",
+                "d",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "2d",
+            [
+                "2",
+                "d",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "As",
+            [
+                "A",
+                "s",
+                "odd"
+            ]
+        ],
+        [
+            "Ks",
+            [
+                "K",
+                "s",
+                "face"
+            ]
+        ],
+        [
+            "Qs",
+            [
+                "Q",
+                "s",
+                "face"
+            ]
+        ],
+        [
+            "Js",
+            [
+                "J",
+                "s",
+                "face"
+            ]
+        ],
+        [
+            "10s",
+            [
+                "10",
+                "s",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "9s",
+            [
+                "9",
+                "s",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "8s",
+            [
+                "8",
+                "s",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "7s",
+            [
+                "7",
+                "s",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "6s",
+            [
+                "6",
+                "s",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "5s",
+            [
+                "5",
+                "s",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "4s",
+            [
+                "4",
+                "s",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "3s",
+            [
+                "3",
+                "s",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "2s",
+            [
+                "2",
+                "s",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "Ac",
+            [
+                "A",
+                "c",
+                "odd"
+            ]
+        ],
+        [
+            "Kc",
+            [
+                "K",
+                "c",
+                "face"
+            ]
+        ],
+        [
+            "Qc",
+            [
+                "Q",
+                "c",
+                "face"
+            ]
+        ],
+        [
+            "Jc",
+            [
+                "J",
+                "c",
+                "face"
+            ]
+        ],
+        [
+            "10c",
+            [
+                "10",
+                "c",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "9c",
+            [
+                "9",
+                "c",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "8c",
+            [
+                "8",
+                "c",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "7c",
+            [
+                "7",
+                "c",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "6c",
+            [
+                "6",
+                "c",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "5c",
+            [
+                "5",
+                "c",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "4c",
+            [
+                "4",
+                "c",
+                "number",
+                "even"
+            ]
+        ],
+        [
+            "3c",
+            [
+                "3",
+                "c",
+                "number",
+                "odd"
+            ]
+        ],
+        [
+            "2c",
+            [
+                "2",
+                "c",
+                "number",
+                "even"
+            ]
+        ]
     ]
     const Jokers = [
         ["J1",0,"Jonkler.png","inf1",[[0,()=>true,()=>{setMainPoint(0,getvariable(0,0))}]],[0]],
@@ -53,132 +527,305 @@
         //name,N,M,function check
         ["FLUSH SIX",300,20,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == undefined
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == 1
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["FLUSH BLOCKHOUSE",300,20,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == 1
+            &&      combo[3] == undefined
+            &&      combo[4] == 1
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["Full Blockhouse",300,20,(cards)=>{
             if(cards.length < 6) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == 1
+            &&      combo[3] == undefined
+            &&      combo[4] == 1
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["FLUSH TWO TRIPLES",300,20,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == undefined
+            &&      combo[3] == 2
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["FLUSH THREE PAIRS",300,20,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == 3
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["Six of a Kind",300,20,(cards)=>{
             if(cards.length < 6) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == undefined
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == 1
         }],
         ["Two Triples",300,20,(cards)=>{
             if(cards.length < 6) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == undefined
+            &&      combo[3] == 2
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["Three Pairs",300,20,(cards)=>{
             if(cards.length < 6) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == 3
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["FLUSH FIVE",300,20,(cards)=>{
             if(cards.length < 5 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == undefined
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == 1
+            &&      combo[6] == undefined
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["FLUSH HOUSE",300,20,(cards)=>{
             if(cards.length < 5 || cards.length < minCardsForFlush) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  combo[2] == 1
+            &&      combo[3] == 1
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["Five of a Kind",300,20,(cards)=>{
             if(cards.length < 5) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == undefined
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == 1
+            &&      combo[6] == undefined
         }],
         ["Straight Flush",300,20,(cards)=>{
             if(cards.length < 5) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            straight = longestOrderedSequence(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            return  straight >= minCardsForStraight
+            &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["Four of a Kind",300,20,(cards)=>{
             if(cards.length < 4) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == undefined
+            &&      combo[3] == undefined
+            &&      combo[4] == 1
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["Full House",300,20,(cards)=>{
             if(cards.length < 5) return false;
-            return false;
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == 1
+            &&      combo[3] == 1
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["Flush",300,20,(cards)=>{
             if(cards.length < minCardsForFlush) return false;
-            
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            suit = countCardSets(tags,["h","d","s","c"])
+            return (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
         ["Straight",300,20,(cards)=>{
             if(cards.length < minCardsForStraight) return false;
-            
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            straight = longestOrderedSequence(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return straight >= minCardsForStraight
         }],
         ["Three of a Kind",300,20,(cards)=>{
             if(cards.length < 3) return false;
-            
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == undefined
+            &&      combo[3] == 1
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["Two Pairs",300,20,(cards)=>{
             if(cards.length < 4) return false;
-            
+            let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            return  combo[2] == 2
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["Pair",300,20,(cards)=>{
+            C(cards)
             if(cards.length < 2) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
-            
-
-
+            combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
+            suit = countCardSets(tags,["h","d","s","c"])
+            C(tags)
+            return  combo[2] == 1
+            &&      combo[3] == undefined
+            &&      combo[4] == undefined
+            &&      combo[5] == undefined
+            &&      combo[6] == undefined
         }],
         ["High Card",300,20,(cards)=>{
             if(cards.length < 1) return false;
             
         }],
 
-        
+        ["None",0,0,(cards)=>true]
     ]
     let gameJokers = [
         ["J1",0,"Jonkler.png","inf1",[[0,()=>true,()=>{setMainPoint(0,getvariable(0,0))}]],[2]]
     ];
     let mainPoints = [0,0];
     // h-srcdce,d-diamond,s-spades,c-clubs
+    let isYourTurn = true;
     let handSize = 8;
     let maxPlayHandSize = 5;
     let minCardsForStraight = 5;
     let minCardsForFlush = 5;
-    let cardsInHand = ["Ah","9c","9h","As","9s","9d","Ac","10c"];
-    let cardsSelectedInHand = ["Ah","9c","9h"];
+    let cardsInHand = [];
+    let cardsSelectedInHand = [];
+    let cardElementsSelectedInHand = [];
     let DeckCards = CopyArray(FullDeck);
 
+    YourTurn()
+    function Test(){
+        return HandPlaying(cardsSelectedInHand)
+    }
+    
 
-
+    function Play(){
+        if(!isYourTurn) return;
+        //funkcionalita ked stlacis tlacidlo play
+    }
+    function HandPlaying(cards){//returns ["Pair",20,2] //name,Ns,Ms
+        //cards = cards.map(card => card[1]);
+        C(cards)
+        let answer = ForEachElement(combos,(combo)=>{//comba si pytaju cele karty
+            if(combo[3](cards)) return[combo[0],combo[1],combo[2]];
+        })
+        C(answer)
+        return answer
+    }
     function YourTurn(){
         while(cardsInHand.length < handSize){
             TakeCard();
         }
+        SortCardsInHand();
         // now u wait for player response
     }
     function TakeCard(){
-        let index = RandomInRange(0,DeckCards.length-1);
+        let i = RandomInRange(0,DeckCards.length-1);
         novaCard = DeckCards[i];
         DeckCards = RemoveAtIndex(DeckCards,i);
 
         //zobratie karty a vlozenie tagov karty
         Event(1,novaCard[1]);
-        AddCardToHand()
+        AddCardToHand(novaCard);//EDIT
 
         cardsInHand.push(novaCard);
     }
     function AddCardToHand(card){
         //GetStringSplitIntoArray(card[0],"")
-        let loc = "Suit="+GetStringSplitIntoArray(card[0],"")[1]=="h"?"Hearts":GetStringSplitIntoArray(card[0],"")[1]=="s"?"Spades":GetStringSplitIntoArray(card[0],"")[1]=="d"?"Diamonds":GetStringSplitIntoArray(card[0],"")[1]=="c"?"Clubs":"Other"+", Number="+GetStringSplitIntoArray(card[0],"")[0]=="A"?"Ace":GetStringSplitIntoArray(card[0],"")[0]=="K"?"King":GetStringSplitIntoArray(card[0],"")[0]=="Q"?"Queen":GetStringSplitIntoArray(card[0],"")[0]=="J"?"Jack":GetStringSplitIntoArray(card[0],"")[0]=="H"?RandomInRange(0,1)==0?"Back Blue":"Back Red":GetStringSplitIntoArray(card[0],"")[0]+".png"
+        console.log(card)
+        console.log(card[0])
+        console.log(card[1])
+        let loc = "Suit="+(card[0][card[0].length-1]=="h"?"Hearts":(card[0][card[0].length-1]=="s"?"Spades":(card[0][card[0].length-1]=="d"?"Diamonds":(card[0][card[0].length-1]=="c"?"Clubs":"Other")))) +", Number="+(card[0][0]=="A"?"Ace":(card[0][0]=="K"?"King":(card[0][0]=="Q"?"Queen":(card[0][0]=="J"?"Jack":(card[0][0]=="1"?"10":(card[0][0]=="H"?(RandomInRange(0,1)==0?"Back Blue":"Back Red"):card[0][0]))))))+".png"
 
         let hand = document.getElementById('hand');
-        hand.addEventListener("click",CardAtemptToSelect())
-        hand.appendChild()
+        let karta = document.createElement('card');
+        let obrazok = document.createElement('img');
+        obrazok.src = `{{ asset('images/${loc}') }}`;
+        obrazok.style.height = "100%";
+
+        karta.style.height = "100%";
+        karta.style.width = "max-content";
+        
+
+        karta.appendChild(obrazok);
+
+        karta.addEventListener("click",(event) => CardAtemptToSelect(card,karta,event));
+        hand.appendChild(karta);
+        console.log(loc);
     }
-    function CardAtemptToSelect(){
-        //if()
+    function CardAtemptToSelect(card,element,event){
+        if(cardsSelectedInHand.some(elem=>elem[0]==card[0])){
+            for (let index = 0; index < cardElementsSelectedInHand.length; index++) {
+                let elm = cardsSelectedInHand[index];
+                if(elm[0] == card[0]){
+                    if(event){
+                        event.target.style.marginTop = "0px";
+                    }
+                    cardElementsSelectedInHand.pop(index);
+                    cardsSelectedInHand.pop(index);
+                    return;
+                }
+            }
+        }else if(maxPlayHandSize > cardsSelectedInHand.length){
+            if(event){
+                event.target.style.marginTop = "-20px";
+            }
+            //here i want to add css styles
+
+            cardElementsSelectedInHand.push(element);
+            cardsSelectedInHand.push(card);
+            C(cardElementsSelectedInHand)
+            C(cardsSelectedInHand)
+        }
     }
     function Start(){
         DeckCards = CopyArray(FullDeck);
@@ -290,6 +937,20 @@
     function getNumOfTags(tag){
 
     }
+    function SortCardsInHand(how){
+        if(how == "none" || how == "custom") return;
+        _g =CopyArray(cardsInHand);
+        //_g =_g.map(card=>[card])//EDIT
+        _g = _g.map(card=>{
+            return [(card[0][0]=="A"?14:(card[0][0]=="K"?13:(card[0][0]=="Q"?12:(card[0][0]=="J"?11:(card[0][0]=="1"?10:Number(card[0][0])))))), (card[0][card[0].length-1]=="h"?4:(card[0][card[0].length-1]=="d"?3:(card[0][card[0].length-1]=="s"?2:(card[0][card[0].length-1]=="c"?1:0))))];
+        })
+        if(how == "suit"){
+
+        }
+        else{
+            _g = _g.sort
+        }
+    }
     function getvariable(idJonkler,idVariable){
         let answer = 0;
         gameJokers.forEach(element => {
@@ -325,10 +986,128 @@
             mainPoints[1] *= value;
         }
     }
+    function countCardSets(cards, validTags) {
+        let countMap = new Map();
+
+        for (let card of cards) {
+            for (let tag of card) {
+                if (validTags.includes(tag)) {
+                    countMap.set(tag, (countMap.get(tag) || 0) + 1);
+                }
+            }
+        }
+
+        let result = new Map();
+        for (let count of countMap.values()) {
+            result.set(count, (result.get(count) || 0) + 1);
+        }
+
+        return Object.fromEntries(result);
+    }
+    function longestOrderedSequence(tags, sequence) {
+        if(sequence == undefined)sequence = ["A","K","Q","J","10","9","8","7","6","5","4","3","2"];
+
+        let longest = 0;
+        let nowest = 0;
+
+        sequence.forEach((Stag)=>{
+            now = true;
+            ForEachElement(tags,(card) =>{
+                if(card.includes(Stag)){
+                    nowest++;
+                    if(nowest>longest) longest=nowest;
+                    now = false;
+                    return 0;
+                }
+            })
+            if(now) nowest = 0;
+        })
+        return longest;
+    }
 
 //------------template
 function FindPaternsAndOutliers(things,test,num){
     
+}
+function ForEachElement(array,func){
+    let answer = undefined;
+    for (let index = 0; index < array.length; index++) {
+        let element = array[index];
+        if(func.length >= 2){
+            answer = func(element,index);
+        }else if(func.length <= 1){
+            answer = func(element);
+        }
+        if (answer !=undefined) break;
+    }
+    return answer;
+}
+function ConvertToAnotherBase(number,oldBase,newBase){
+    let array = MakeArray(number);
+    let inbase10 = 0;
+    if(oldBase != 10){
+        let space = array.length-1;
+        array.forEach(item=>{
+            inbase10 += Math.pow(oldBase,space) * item;
+            space--;
+        })
+    }else{
+        inbase10 = number;
+    }
+    let answer = 0;
+    if(newBase != 10){
+        let place = 0;
+        let rem = 0;
+        while(true){
+            rem = inbase10 % newBase;
+            answer += rem * Math.pow(10,place);
+            inbase10 -= rem;
+            inbase10 /= newBase;
+            place++;
+            if(inbase10 == 0) break;
+        }
+    }else{
+        answer = inbase10;
+    }
+    return answer;
+}
+function C(any){
+    console.log(any)
+}
+function IsSameObject(obj1, obj2) {
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) return false
+  
+    for (const key in obj1) {
+      const value1 = obj1[key]
+      const value2 = obj2[key]
+      if (typeof value1 === "object" && value2 !== null) {
+        if (!IsSameObject(value1, value2)) return false
+      } else if (value1 !== value2) {
+        return false
+      }
+    }
+    return true
+}
+function CopyObject(object){
+    let newObject = {}
+    for(let key in object){
+        value = object[key]
+        newObject[key] = value
+    }
+    return newObject
+}
+function Faktorial(number) {
+    if(number == 0) return 1
+    return number * Faktorial(number-1)
+}
+function installFile(content,filename,fileType) {
+    const blob = new Blob([content], { type: 'text/plain' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = `${filename}.${fileType}`
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
 }
 function GetArraysCommonElement(array1,array2,tests){//tests is optional
     answer = undefined;
@@ -526,7 +1305,7 @@ function GetArrayFromIndexes(x1,x2,array) {
   return (array.slice(x1,x2+1))
 }
 function GetStringSplitIntoArray(string,separator) {
-  if(separator == "") return string.split();
+  if(separator == undefined) return string.split("");
   return (string.split(String(separator)))
 }
 </script>
