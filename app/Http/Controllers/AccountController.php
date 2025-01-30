@@ -21,7 +21,7 @@ class AccountController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('collection');
+            return redirect()->route('menu');
         }
 
         return back()->withErrors([
@@ -52,6 +52,6 @@ class AccountController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('collection');
+        return redirect()->route('menu');
     }
 }

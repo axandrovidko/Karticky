@@ -1070,6 +1070,9 @@
     height: 160px;
     top: 702px;
     left: 609px;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
 }
 
 .hra .overlap-14 {

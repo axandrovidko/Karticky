@@ -11,6 +11,20 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
 <body>
     <div class="hra">
         <div class="div">
+            <div style="z-index: 999; position absolute; top:48px; left:1024px; color:white;" class="overlap">
+                @if (Auth::check())
+                    <span>Welcome, {{ Auth::user()->name }}!</span>
+                    {{-- <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form> --}}
+                @else
+                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
+                @endif
+            </div>
+        </div>
+
             <div class="overlap">
                 <div class="overlap-group">
                     <div class="rectangle"></div>
@@ -167,16 +181,19 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
                     </div>
                 </div>
             </div>
-            <div class="profile-button" id="profileButton">
-                <div class="overlap-14">
-                    <div class="group-3">
-                        <div class="overlap-group-5">
-                            <div class="rectangle-4"></div>
+            <form action="{{ route('login') }}">
+                <button type="submit" class="profile-button" id="profileButton">
+                    <div class="overlap-14">
+                        <div class="group-3">
+                            <div class="overlap-group-5">
+                                <div class="rectangle-4"></div>
+                            </div>
                         </div>
+                        <div class="element-basic-user"><img class="icon-3" src="/images/user.png" /></div>
                     </div>
-                    <div class="element-basic-user"><img class="icon-3" src="/images/user.png" /></div>
-                </div>
-            </div>
+                </button>
+            </form>
+
         </div>
     </div>
 </body>
@@ -201,7 +218,7 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
     });
 
     // Profile Button
-    document.getElementById("profileButton").addEventListener("click", function() {
-        alert("Opening profile...");
-    });
+    // document.getElementById("profileButton").addEventListener("click", function() {
+    //    alert("Opening profile...");
+    // });
 </script>

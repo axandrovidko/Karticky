@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('menu');
-});
+})->name('menu');
 Route::get('/collection', function () {
     return view('collection');
 })->name('collection');
