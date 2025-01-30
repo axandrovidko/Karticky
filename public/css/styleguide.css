@@ -1,0 +1,11 @@
+:root {
+    --dark: rgba(0, 41, 107, 1);
+    --yellow-contrast: rgba(253, 197, 0, 1);
+    --light: rgba(144, 224, 239, 1);
+    --mid: rgba(70, 101, 138, 1);
+    --yellow-light: rgba(255, 213, 0, 1);
+    --fade-black: rgba(0, 0, 0, 1);
+    --red: rgba(188, 30, 36, 1);
+    --black: rgba(33, 28, 29, 1);
+  }
+  
