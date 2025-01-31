@@ -24,6 +24,7 @@
         <div id="jokers" style="display:flex; flex-direction:row; justify-content:space-between;height:30%;">
 
         </div>
+
         <div id="hand" style="display:flex; flex-direction:row; justify-content:space-between;height:30%;">
             
         </div>
@@ -525,7 +526,7 @@
     ]
     const combos = [
         //name,N,M,function check
-        ["FLUSH SIX",300,20,(cards)=>{
+        ["FLUSH SIX",666,66,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -537,7 +538,7 @@
             &&      combo[6] == 1
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["FLUSH BLOCKHOUSE",300,20,(cards)=>{
+        ["FLUSH BLOCKHOUSE",450,45,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -549,7 +550,7 @@
             &&      combo[6] == undefined
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["Full Blockhouse",300,20,(cards)=>{
+        ["Full Blockhouse",350,40,(cards)=>{
             if(cards.length < 6) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -559,7 +560,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["FLUSH TWO TRIPLES",300,20,(cards)=>{
+        ["FLUSH TWO TRIPLES",350,30,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -571,7 +572,7 @@
             &&      combo[6] == undefined
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["FLUSH THREE PAIRS",300,20,(cards)=>{
+        ["FLUSH THREE PAIRS",340,28,(cards)=>{
             if(cards.length < 6 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -583,7 +584,7 @@
             &&      combo[6] == undefined
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["Six of a Kind",300,20,(cards)=>{
+        ["Six of a Kind",266,26,(cards)=>{
             if(cards.length < 6) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -593,7 +594,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == 1
         }],
-        ["Two Triples",300,20,(cards)=>{
+        ["Two Triples",250,24,(cards)=>{
             if(cards.length < 6) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -603,7 +604,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["Three Pairs",300,20,(cards)=>{
+        ["Three Pairs",200,22,(cards)=>{
             if(cards.length < 6) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -613,7 +614,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["FLUSH FIVE",300,20,(cards)=>{
+        ["FLUSH FIVE",240,20,(cards)=>{
             if(cards.length < 5 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -625,7 +626,7 @@
             &&      combo[6] == undefined
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["FLUSH HOUSE",300,20,(cards)=>{
+        ["FLUSH HOUSE",180,14,(cards)=>{
             if(cards.length < 5 || cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -637,7 +638,7 @@
             &&      combo[6] == undefined
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["Five of a Kind",300,20,(cards)=>{
+        ["Five of a Kind",150,12,(cards)=>{
             if(cards.length < 5) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -647,7 +648,7 @@
             &&      combo[5] == 1
             &&      combo[6] == undefined
         }],
-        ["Straight Flush",300,20,(cards)=>{
+        ["Straight Flush",100,8,(cards)=>{
             if(cards.length < 5) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             straight = longestOrderedSequence(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -655,7 +656,7 @@
             return  straight >= minCardsForStraight
             &&      (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["Four of a Kind",300,20,(cards)=>{
+        ["Four of a Kind",50,7,(cards)=>{
             if(cards.length < 4) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -665,7 +666,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["Full House",300,20,(cards)=>{
+        ["Full House",35,6,(cards)=>{
             if(cards.length < 5) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -675,19 +676,19 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["Flush",300,20,(cards)=>{
+        ["Flush",35,5,(cards)=>{
             if(cards.length < minCardsForFlush) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             suit = countCardSets(tags,["h","d","s","c"])
             return (suit[minCardsForFlush] == 1||suit[minCardsForFlush+1] == 1||suit[minCardsForFlush+2] == 1)
         }],
-        ["Straight",300,20,(cards)=>{
+        ["Straight",30,4,(cards)=>{
             if(cards.length < minCardsForStraight) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             straight = longestOrderedSequence(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
             return straight >= minCardsForStraight
         }],
-        ["Three of a Kind",300,20,(cards)=>{
+        ["Three of a Kind",30,3,(cards)=>{
             if(cards.length < 3) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -697,7 +698,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["Two Pairs",300,20,(cards)=>{
+        ["Two Pairs",25,2,(cards)=>{
             if(cards.length < 4) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
             combo = countCardSets(tags,["2","3","4","5","6","7","8","9","10","J","Q","K","A"])
@@ -707,7 +708,7 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["Pair",300,20,(cards)=>{
+        ["Pair",10,2,(cards)=>{
             C(cards)
             if(cards.length < 2) return false;
             let tags = []; cards.forEach(card =>{ tags.push(card[1]) })
@@ -720,15 +721,15 @@
             &&      combo[5] == undefined
             &&      combo[6] == undefined
         }],
-        ["High Card",300,20,(cards)=>{
+        ["High Card",5,1,(cards)=>{
             if(cards.length < 1) return false;
-            
         }],
-
+        
         ["None",0,0,(cards)=>true]
     ]
     let gameJokers = [
-        ["J1",0,"Jonkler.png","inf1",[[0,()=>true,()=>{setMainPoint(0,getvariable(0,0))}]],[2]]
+        ["J1",0,"Jonkler.png","inf1",[[0,()=>true,()=>{setMainPoint(0,getvariable(0,0))}]],[2]],
+        ["J7",6,"Jonkler.png","inf7",[[1,()=>getNumOfTags("K")>0||getNumOfTags("Q")>0,()=>{C(getvariable(6,0));setVariable(6,0,getvariable(6,0)+1);setMainPoint(0,getvariable(6,0))}]],[1]]
     ];
     let mainPoints = [0,0];
     // h-srcdce,d-diamond,s-spades,c-clubs
@@ -737,28 +738,54 @@
     let maxPlayHandSize = 5;
     let minCardsForStraight = 5;
     let minCardsForFlush = 5;
+    let nowPlayingcard = [];//card that is getting scored
     let cardsInHand = [];
     let cardsSelectedInHand = [];
     let cardElementsSelectedInHand = [];
     let DeckCards = CopyArray(FullDeck);
 
     YourTurn()
-    function Test(){
-        return HandPlaying(cardsSelectedInHand)
-    }
     
 
-    function Play(){
+    async function Play(){
+        let waitTime = 1000;
         if(!isYourTurn) return;
         //funkcionalita ked stlacis tlacidlo play
+        let curHand = HandPlaying(cardsSelectedInHand);
+        mainPoints = [0,0]
+        C("Hand played: " + curHand[0])
+        mainPoints[0] += curHand[1];
+        C("N =" + curHand[1])
+        mainPoints[1] += curHand[2];
+        C("M =" + curHand[2])
+        await delay(waitTime)
+        Event(0,cardsSelectedInHand.map(card=>card[1]))
+
+        for (const card of cardsSelectedInHand){
+            nowPlayingcard =CopyArray(card);
+            mainPoints[0] += (card[0][0]=="A"?11:(card[0][0]=="K"||card[0][0]=="Q"||card[0][0]=="J"||card[0][0]=="1"?10:Number(card[0][0])))
+            C("N +" + (card[0][0]=="A"?11:(card[0][0]=="K"||card[0][0]=="Q"||card[0][0]=="J"||card[0][0]=="1"?10:Number(card[0][0]))))
+            await delay(waitTime)
+            await Event(1,card[1]);
+        }
+
+        DoFewTimes(cardsSelectedInHand.length,()=>{RemoveCard(0)});
+    }
+    function RemoveCard(i){//vymaze kartu z kurky na indexe zo selecnutych
+        ForEachElement(cardsInHand,(card,index)=>{
+            if(card[0]==cardsSelectedInHand[i][0]){
+                cardElementsSelectedInHand = RemoveAtIndex(cardElementsSelectedInHand,i);
+                cardsSelectedInHand = RemoveAtIndex(cardsSelectedInHand,i);
+                cardsInHand = RemoveAtIndex(cardsInHand,i);
+                return;
+            }
+        })
     }
     function HandPlaying(cards){//returns ["Pair",20,2] //name,Ns,Ms
         //cards = cards.map(card => card[1]);
-        C(cards)
         let answer = ForEachElement(combos,(combo)=>{//comba si pytaju cele karty
             if(combo[3](cards)) return[combo[0],combo[1],combo[2]];
         })
-        C(answer)
         return answer
     }
     function YourTurn(){
@@ -774,12 +801,12 @@
         DeckCards = RemoveAtIndex(DeckCards,i);
 
         //zobratie karty a vlozenie tagov karty
-        Event(1,novaCard[1]);
+        //Event(1,novaCard[1]);
         AddCardToHand(novaCard);//EDIT
 
         cardsInHand.push(novaCard);
     }
-    function AddCardToHand(card){
+    function AddCardToHand(card,selected){
         //GetStringSplitIntoArray(card[0],"")
         console.log(card)
         console.log(card[0])
@@ -794,7 +821,7 @@
 
         karta.style.height = "100%";
         karta.style.width = "max-content";
-        
+        if(selected == true) karta.style.marginTop = "-20px";
 
         karta.appendChild(obrazok);
 
@@ -806,15 +833,16 @@
         if(cardsSelectedInHand.some(elem=>elem[0]==card[0])){
             for (let index = 0; index < cardElementsSelectedInHand.length; index++) {
                 let elm = cardsSelectedInHand[index];
-                if(elm[0] == card[0]){
+                if(elm[0] === card[0]){
                     if(event){
                         event.target.style.marginTop = "0px";
                     }
-                    cardElementsSelectedInHand.pop(index);
-                    cardsSelectedInHand.pop(index);
-                    return;
+                    cardElementsSelectedInHand = RemoveAtIndex(cardElementsSelectedInHand,index);
+                    cardsSelectedInHand = RemoveAtIndex(cardsSelectedInHand,index);
+                    break;
                 }
             }
+            C(cardsSelectedInHand)
         }else if(maxPlayHandSize > cardsSelectedInHand.length){
             if(event){
                 event.target.style.marginTop = "-20px";
@@ -823,7 +851,6 @@
 
             cardElementsSelectedInHand.push(element);
             cardsSelectedInHand.push(card);
-            C(cardElementsSelectedInHand)
             C(cardsSelectedInHand)
         }
     }
@@ -835,14 +862,12 @@
         YourTurn();
     }
     function Event(when,tags){
-        function _getNumOfTags(_tag) {
-            return getNumOfTags(_tag)
-        }
-        if(when == 0){
+        if(typeof tags != object) tags = [tags];
+        if(when == 0){//at start of game
             //nothing
         }
-        else if(when == 1){
-            _getNumOfTags = (_tag) => {
+        else if(when == 1){//card played
+            getNumOfTags = function (_tag) {
                 yes = true;
                 _tag.forEach(tag => {
                     if(!tags.includes(tag)){
@@ -852,8 +877,8 @@
                 return yes?1:0;
             }
         }
-        else if(when == 2){
-            _getNumOfTags = (_tag) => {
+        else if(when == 2){//card played
+            getNumOfTags = function (_tag) {
                 yes = true;
                 _tag.forEach(tag => {
                     if(!tags.includes(tag)){
@@ -864,7 +889,7 @@
             }
         }
         else if(when == 3){
-            _getNumOfTags = (_tag) => {
+            getNumOfTags = function (_tag) {
                 yes = true;
                 _tag.forEach(tag => {
                     if(!tags.includes(tag)){
@@ -875,7 +900,7 @@
             }
         }
         else if(when == 4){
-            _getNumOfTags = (_tag) => {
+            getNumOfTags = function (_tag) {
                 all = 0;
                 yes = true;
                 _tag.forEach(card => {
@@ -890,11 +915,11 @@
             }
         }
         else if(when == 5){
-            _getNumOfTags = (_tag) => {
+            getNumOfTags = function (_tag) {
                 all = 0;
-                yes = true;
-                _tag.forEach(card => {
-                    card.forEach(tag => {
+                _tag.forEach(card => {//tagy na test
+                    yes = true;
+                    card.forEach(tag => {//kazdy tag karty
                         if(!tags.includes(tag)){
                             yes = false;
                         }
@@ -904,7 +929,6 @@
                 return all;
             }
         }
-        getNumOfTags = _getNumOfTags;
         //get Tags ready
         
         //spusti vsetky pravidla jokerov(kontrola podmienky)
@@ -934,7 +958,7 @@
         
         */
     }
-    function getNumOfTags(tag){
+    function getNumOfTags(tag){//empty, is set in event
 
     }
     function SortCardsInHand(how){
@@ -948,14 +972,14 @@
 
         }
         else{
-            _g = _g.sort
+            _g = _g.sort()
         }
     }
     function getvariable(idJonkler,idVariable){
-        let answer = 0;
-        gameJokers.forEach(element => {
-            if(element[1] == idJonkler){
-                answer = element[6][idVariable];
+        let answer = null;
+        gameJokers.forEach(joker => {
+            if(joker[1] == idJonkler){
+                answer = joker[5][idVariable];
                 return answer;
             }
         });
@@ -966,7 +990,7 @@
         for (let i = 0; i < gameJokers.length; i++) {
             let element = gameJokers[i];
             if(gameJokers[i][1] == idJonkler){
-                gameJokers[i][6][idVariable] = value;
+                gameJokers[i][5][idVariable] = value;
             }
         }
     }
@@ -977,12 +1001,15 @@
         2 - xm
         */
         if (type == 0){
+            C("N +" + value);
             mainPoints[0] += value;
         }
         else if(type == 1){
+            C("M +" + value);
             mainPoints[1] += value;
         }
         else if(type == 2){
+            C("M x" + value);
             mainPoints[1] *= value;
         }
     }
@@ -1024,10 +1051,29 @@
         })
         return longest;
     }
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
 //------------template
 function FindPaternsAndOutliers(things,test,num){
     
+}
+function DoFewTimes(top,func){
+    let answer = undefined;
+    for (let index = 0; index < top; index++) {
+        answer = func(index);
+        if (answer != undefined) break;
+    }
+    return answer;
+}
+function DoFewTimes(top,bottom,func){
+    let answer = undefined;
+    for (let index = bottom; index < top; index++) {
+        answer = func(index);
+        if (answer != undefined) break;
+    }
+    return answer;
 }
 function ForEachElement(array,func){
     let answer = undefined;
