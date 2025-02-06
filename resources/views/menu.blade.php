@@ -11,7 +11,7 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
 <body>
     <div class="hra">
         <div class="div">
-            <div style="z-index: 999; position absolute; top:48px; left:1024px; color:white;" class="overlap">
+            <div style="z-index: 999; position:absolute; top:48px; left:1024px; color:white;" class="overlap">
                 @if (Auth::check())
                     <span>Welcome, {{ Auth::user()->name }}!</span>
                     {{-- <form action="{{ route('logout') }}" method="POST">
