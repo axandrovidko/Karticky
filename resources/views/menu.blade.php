@@ -1,4 +1,4 @@
-Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,22 +9,10 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
 </head>
 
 <body>
+<div class="MainScreen">
     <div class="hra">
+        <div class="UpperGame">
         <div class="div">
-            <div style="z-index: 999; position:absolute; top:48px; left:1024px; color:white;" class="overlap">
-                @if (Auth::check())
-                    <span>Welcome, {{ Auth::user()->name }}!</span>
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form> --}}
-                @else
-                    <a href="{{ route('login') }}">Login</a>
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            </div>
-        </div>
-
             <div class="overlap">
                 <div class="overlap-group">
                     <div class="rectangle"></div>
@@ -181,27 +169,24 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
                     </div>
                 </div>
             </div>
-            <form action="{{ route('login') }}">
-                <button type="submit" class="profile-button" id="profileButton">
-                    <div class="overlap-14">
-                        <div class="group-3">
-                            <div class="overlap-group-5">
-                                <div class="rectangle-4"></div>
-                            </div>
+            <div class="profile-button" id="profileButton">
+                <div class="overlap-14">
+                    <div class="group-3">
+                        <div class="overlap-group-5">
+                            <div class="rectangle-4"></div>
                         </div>
-                        <div class="element-basic-user"><img class="icon-3" src="/images/user.png" /></div>
                     </div>
-                </button>
-            </form>
-
+                    <div class="element-basic-user"><img class="icon-3" src="/images/user.png" /></div>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+</div>
 </body>
 
 </html>
-
-<!-- JavaScript -->
-<script>
+<script defer>
     // Offline Button
     document.getElementById("offlineButton").addEventListener("click", function() {
         window.location.href = "{{ route('game') }}";
@@ -218,7 +203,49 @@ Hey, Cortana. Crazy, crazy joker. File. End file.<!DOCTYPE html>
     });
 
     // Profile Button
-    // document.getElementById("profileButton").addEventListener("click", function() {
-    //    alert("Opening profile...");
-    // });
+    document.getElementById("profileButton").addEventListener("click", function() {
+        alert("Opening profile...");
+    });
+
+    function scaleContent() {
+        let mainScreen = document.querySelector('.MainScreen');
+        let scaleX = window.innerWidth / screen.width;
+        let scaleY = window.innerHeight / screen.height;
+        let scale = Math.min(scaleX, scaleY); // Maintain aspect ratio
+
+        mainScreen.style.transform = `scale(${scale})`;
+    }
+
+    window.addEventListener('resize', scaleContent);
+    window.addEventListener('load', scaleContent);
+
+    function scaleContent() {
+        let mainScreen = document.querySelector('.UpperGame'); // Ensure this is correct
+        if (!mainScreen) return; // Prevent errors if element is not found
+
+        const DESIGN_WIDTH = 1920;
+        const DESIGN_HEIGHT = 1080;
+
+        let viewportWidth = window.innerWidth;
+        let viewportHeight = window.innerHeight;
+
+        let scaleX = viewportWidth / DESIGN_WIDTH;
+        let scaleY = viewportHeight / DESIGN_HEIGHT;
+        let scale = Math.min(scaleX, scaleY); 
+
+        mainScreen.style.transform = `scale(${scale})`;
+        mainScreen.style.transformOrigin = "top left"; 
+
+        let scaledWidth = DESIGN_WIDTH * scale;
+        let scaledHeight = DESIGN_HEIGHT * scale;
+        let leftOffset = (viewportWidth - scaledWidth) / 2;
+        let topOffset = (viewportHeight - scaledHeight) / 2;
+
+        mainScreen.style.position = "absolute";
+        mainScreen.style.left = `${leftOffset}px`;
+        mainScreen.style.top = `${topOffset}px`;
+    }
+
+    window.addEventListener("resize", scaleContent);
+    window.addEventListener("DOMContentLoaded", scaleContent);
 </script>

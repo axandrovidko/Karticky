@@ -1,45 +1,40 @@
 .hra {
-    display: flex; /* Enable flexbox for easy centering */
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    position: fixed; /* Fix the container to the viewport */
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden; /* Prevent scrolling */
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
     background-color: var(
         --dark
-    ); /* Ensure background fills entire container */
-}
-
-.hra .div {
-    position: relative;
+    );
+  }
+  
+  .hra .div {
     width: 100%; /* Scale to parent width */
     height: auto; /* Maintain aspect ratio */
-    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
-    max-height: 90vh; /* Ensure it doesn't exceed viewport height */
     background-color: var(--dark); /* Background color for reference */
     margin-bottom: 61vw;
-}
-
-.hra .overlap {
+  }
+  
+  .hra .overlap {
     position: absolute;
-    width: 1082px;
-    height: 608px;
+    width: 20%;
+    height: 20%;
     top: 79px;
     left: 223px;
-}
-
-.hra .overlap-group {
+  }
+  
+  .hra .overlap-group {
     position: absolute;
-    width: 981px;
-    height: 462px;
+    width: 20%;
+    height: 20%;
     top: 0;
     left: 101px;
-}
-
-.hra .rectangle {
+  }
+  
+  .hra .rectangle {
     position: absolute;
     width: 652px;
     height: 208px;
@@ -52,9 +47,9 @@
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .joker {
+  }
+  
+  .hra .joker {
     position: absolute;
     top: 23px;
     left: 552px;
@@ -62,157 +57,157 @@
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-2 {
+  }
+  
+  .hra .overlap-2 {
     position: relative;
     height: 288px;
     border-radius: 10px;
-}
-
-.hra .MC {
+  }
+  
+  .hra .MC {
     position: absolute;
     width: 60px;
     height: 77px;
     top: 125px;
     left: 72px;
     box-shadow: 0px 0px 4px #00000080;
-}
-
-.hra .overlap-group-2 {
+  }
+  
+  .hra .overlap-group-2 {
     position: relative;
     width: 82px;
     height: 109px;
     top: -16px;
     left: -11px;
-}
-
-.hra .hat {
+  }
+  
+  .hra .hat {
     position: absolute;
     width: 65px;
     height: 46px;
     top: 8px;
     left: 9px;
     transform: rotate(-16.28deg);
-}
-
-.hra .clothes {
+  }
+  
+  .hra .clothes {
     position: absolute;
     width: 69px;
     height: 55px;
     top: 46px;
     left: 6px;
     transform: rotate(-16.28deg);
-}
-
-.hra .face {
+  }
+  
+  .hra .face {
     position: absolute;
     width: 37px;
     height: 37px;
     top: 34px;
     left: 21px;
     transform: rotate(-16.28deg);
-}
-
-.hra .chin {
+  }
+  
+  .hra .chin {
     position: absolute;
     width: 8px;
     height: 6px;
     top: 62px;
     left: 35px;
     transform: rotate(-16.28deg);
-}
-
-.hra .teeth {
+  }
+  
+  .hra .teeth {
     position: absolute;
     width: 9px;
     height: 7px;
     top: 55px;
     left: 35px;
     transform: rotate(-16.28deg);
-}
-
-.hra .nose {
+  }
+  
+  .hra .nose {
     position: absolute;
     width: 10px;
     height: 13px;
     top: 45px;
     left: 35px;
     transform: rotate(-16.28deg);
-}
-
-.hra .eye {
+  }
+  
+  .hra .eye {
     position: absolute;
     width: 12px;
     height: 11px;
     top: 40px;
     left: 39px;
     transform: rotate(-16.28deg);
-}
-
-.hra .img {
+  }
+  
+  .hra .img {
     position: absolute;
     width: 12px;
     height: 12px;
     top: 39px;
     left: 29px;
     transform: rotate(-16.28deg);
-}
-
-.hra .joker-2 {
+  }
+  
+  .hra .joker-2 {
     position: absolute;
     width: 3px;
     height: 23px;
     top: 106px;
     left: 69px;
-}
-
-.hra .JOKER {
+  }
+  
+  .hra .JOKER {
     position: absolute;
     width: 4px;
     height: 5px;
     top: 19px;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-2 {
+  }
+  
+  .hra .JOKER-2 {
     position: absolute;
     width: 4px;
     height: 5px;
     top: 14px;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .union {
+  }
+  
+  .hra .union {
     position: absolute;
     width: 4px;
     height: 5px;
     top: 9px;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-3 {
+  }
+  
+  .hra .JOKER-3 {
     position: absolute;
     width: 4px;
     height: 4px;
     top: 4px;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-4 {
+  }
+  
+  .hra .JOKER-4 {
     position: absolute;
     width: 4px;
     height: 4px;
     top: 0;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .queen-diamond {
+  }
+  
+  .hra .queen-diamond {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -220,203 +215,203 @@
     left: 0;
     background-color: #ffffff;
     border-radius: 10px;
-}
-
-.hra .joker-3 {
+  }
+  
+  .hra .joker-3 {
     position: absolute;
     width: 9px;
     height: 62px;
     top: 218px;
     left: 186px;
     transform: rotate(180deg);
-}
-
-.hra .JOKER-5 {
+  }
+  
+  .hra .JOKER-5 {
     position: absolute;
     width: 10px;
     height: 13px;
     top: 50px;
     left: -1px;
     transform: rotate(-196.28deg);
-}
-
-.hra .JOKER-6 {
+  }
+  
+  .hra .JOKER-6 {
     position: absolute;
     width: 10px;
     height: 12px;
     top: 36px;
     left: -1px;
     transform: rotate(-196.28deg);
-}
-
-.hra .union-2 {
+  }
+  
+  .hra .union-2 {
     position: absolute;
     width: 11px;
     height: 13px;
     top: 24px;
     left: -1px;
     transform: rotate(-196.28deg);
-}
-
-.hra .JOKER-7 {
+  }
+  
+  .hra .JOKER-7 {
     position: absolute;
     width: 10px;
     height: 10px;
     top: 12px;
     left: 0;
     transform: rotate(-196.28deg);
-}
-
-.hra .JOKER-8 {
+  }
+  
+  .hra .JOKER-8 {
     position: absolute;
     width: 11px;
     height: 10px;
     top: 1px;
     left: -1px;
     transform: rotate(-196.28deg);
-}
-
-.hra .overlap-wrapper {
+  }
+  
+  .hra .overlap-wrapper {
     position: absolute;
     width: 160px;
     height: 205px;
     top: 50px;
     left: 23px;
     box-shadow: 0px 0px 10.57px #00000080;
-}
-
-.hra .overlap-3 {
+  }
+  
+  .hra .overlap-3 {
     position: relative;
     top: -49px;
     left: -28px;
-}
-
-.hra .hat-2 {
+  }
+  
+  .hra .hat-2 {
     position: absolute;
     width: 171px;
     height: 121px;
     top: 22px;
     left: 23px;
     transform: rotate(-16.28deg);
-}
-
-.hra .clothes-2 {
+  }
+  
+  .hra .clothes-2 {
     position: absolute;
     width: 182px;
     height: 145px;
     top: 121px;
     left: 17px;
     transform: rotate(-16.28deg);
-}
-
-.hra .face-2 {
+  }
+  
+  .hra .face-2 {
     position: absolute;
     width: 98px;
     height: 98px;
     top: 89px;
     left: 56px;
     transform: rotate(-16.28deg);
-}
-
-.hra .chin-2 {
+  }
+  
+  .hra .chin-2 {
     position: absolute;
     width: 20px;
     height: 15px;
     top: 164px;
     left: 93px;
     transform: rotate(-16.28deg);
-}
-
-.hra .teeth-2 {
+  }
+  
+  .hra .teeth-2 {
     position: absolute;
     width: 24px;
     height: 19px;
     top: 146px;
     left: 93px;
     transform: rotate(-16.28deg);
-}
-
-.hra .nose-2 {
+  }
+  
+  .hra .nose-2 {
     position: absolute;
     width: 27px;
     height: 33px;
     top: 118px;
     left: 91px;
     transform: rotate(-16.28deg);
-}
-
-.hra .eye-2 {
+  }
+  
+  .hra .eye-2 {
     position: absolute;
     width: 31px;
     height: 30px;
     top: 106px;
     left: 102px;
     transform: rotate(-16.28deg);
-}
-
-.hra .eye-3 {
+  }
+  
+  .hra .eye-3 {
     position: absolute;
     width: 31px;
     height: 31px;
     top: 103px;
     left: 77px;
     transform: rotate(-16.28deg);
-}
-
-.hra .joker-4 {
+  }
+  
+  .hra .joker-4 {
     position: absolute;
     width: 9px;
     height: 62px;
     top: 6px;
     left: 9px;
-}
-
-.hra .JOKER-9 {
+  }
+  
+  .hra .JOKER-9 {
     position: absolute;
     width: 10px;
     height: 13px;
     top: 50px;
     left: -1px;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-10 {
+  }
+  
+  .hra .JOKER-10 {
     position: absolute;
     width: 10px;
     height: 12px;
     top: 36px;
     left: -1px;
     transform: rotate(-16.28deg);
-}
-
-.hra .union-3 {
+  }
+  
+  .hra .union-3 {
     position: absolute;
     width: 11px;
     height: 13px;
     top: 24px;
     left: -1px;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-11 {
+  }
+  
+  .hra .JOKER-11 {
     position: absolute;
     width: 10px;
     height: 10px;
     top: 12px;
     left: 0;
     transform: rotate(-16.28deg);
-}
-
-.hra .JOKER-12 {
+  }
+  
+  .hra .JOKER-12 {
     position: absolute;
     width: 11px;
     height: 10px;
     top: 1px;
     left: -1px;
     transform: rotate(-16.28deg);
-}
-
-.hra .frame {
+  }
+  
+  .hra .frame {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -425,373 +420,373 @@
     top: 53px;
     left: 596px;
     transform: rotate(14.85deg);
-}
-
-.hra .overlap-group-wrapper {
+  }
+  
+  .hra .overlap-group-wrapper {
     position: relative;
     transform: rotate(31.42deg);
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-group-3 {
+  }
+  
+  .hra .overlap-group-3 {
     position: relative;
     width: 100px;
     height: 137px;
     top: -29px;
     left: -20px;
-}
-
-.hra .hat-3 {
+  }
+  
+  .hra .hat-3 {
     position: absolute;
     width: 63px;
     height: 64px;
     top: 13px;
     left: 19px;
     transform: rotate(-46.28deg);
-}
-
-.hra .clothes-3 {
+  }
+  
+  .hra .clothes-3 {
     position: absolute;
     width: 70px;
     height: 71px;
     top: 51px;
     left: 15px;
     transform: rotate(-46.28deg);
-}
-
-.hra .face-3 {
+  }
+  
+  .hra .face-3 {
     position: absolute;
     width: 42px;
     height: 42px;
     top: 44px;
     left: 28px;
     transform: rotate(-46.28deg);
-}
-
-.hra .chin-3 {
+  }
+  
+  .hra .chin-3 {
     position: absolute;
     width: 7px;
     height: 7px;
     top: 74px;
     left: 45px;
     transform: rotate(-46.28deg);
-}
-
-.hra .teeth-3 {
+  }
+  
+  .hra .teeth-3 {
     position: absolute;
     width: 9px;
     height: 9px;
     top: 68px;
     left: 44px;
     transform: rotate(-46.28deg);
-}
-
-.hra .nose-3 {
+  }
+  
+  .hra .nose-3 {
     position: absolute;
     width: 13px;
     height: 13px;
     top: 58px;
     left: 42px;
     transform: rotate(-46.28deg);
-}
-
-.hra .eye-4 {
+  }
+  
+  .hra .eye-4 {
     position: absolute;
     width: 13px;
     height: 13px;
     top: 53px;
     left: 47px;
     transform: rotate(-46.28deg);
-}
-
-.hra .eye-5 {
+  }
+  
+  .hra .eye-5 {
     position: absolute;
     width: 13px;
     height: 13px;
     top: 52px;
     left: 37px;
     transform: rotate(-46.28deg);
-}
-
-.hra .overlap-4 {
+  }
+  
+  .hra .overlap-4 {
     position: relative;
     width: 7px;
     height: 26px;
     top: -1px;
     left: -2px;
-}
-
-.hra .overlap-5 {
+  }
+  
+  .hra .overlap-5 {
     position: absolute;
     width: 7px;
     height: 22px;
     top: 4px;
     left: 0;
-}
-
-.hra .JOKER-13 {
+  }
+  
+  .hra .JOKER-13 {
     position: absolute;
     width: 5px;
     height: 5px;
     top: 16px;
     left: 1px;
     transform: rotate(-46.28deg);
-}
-
-.hra .overlap-6 {
+  }
+  
+  .hra .overlap-6 {
     position: absolute;
     width: 7px;
     height: 12px;
     top: 4px;
     left: 0;
-}
-
-.hra .JOKER-14 {
+  }
+  
+  .hra .JOKER-14 {
     position: absolute;
     width: 5px;
     height: 5px;
     top: 6px;
     left: 1px;
     transform: rotate(-46.28deg);
-}
-
-.hra .union-4 {
+  }
+  
+  .hra .union-4 {
     position: absolute;
     width: 5px;
     height: 5px;
     top: 1px;
     left: 1px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-15 {
+  }
+  
+  .hra .JOKER-15 {
     position: absolute;
     width: 4px;
     height: 4px;
     top: 1px;
     left: 2px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-16 {
+  }
+  
+  .hra .JOKER-16 {
     position: absolute;
     width: 5px;
     height: 3px;
     top: 1px;
     left: 2px;
     transform: rotate(-46.28deg);
-}
-
-.hra .overlap-7 {
+  }
+  
+  .hra .overlap-7 {
     position: relative;
     width: 20px;
     height: 68px;
     top: -2px;
     left: -5px;
-}
-
-.hra .overlap-8 {
+  }
+  
+  .hra .overlap-8 {
     position: absolute;
     width: 20px;
     height: 57px;
     top: 10px;
     left: 0;
-}
-
-.hra .JOKER-17 {
+  }
+  
+  .hra .JOKER-17 {
     position: absolute;
     width: 12px;
     height: 14px;
     top: 41px;
     left: 3px;
     transform: rotate(-226.28deg);
-}
-
-.hra .overlap-9 {
+  }
+  
+  .hra .overlap-9 {
     position: absolute;
     width: 19px;
     height: 31px;
     top: 12px;
     left: 0;
-}
-
-.hra .JOKER-18 {
+  }
+  
+  .hra .JOKER-18 {
     position: absolute;
     width: 13px;
     height: 13px;
     top: 16px;
     left: 3px;
     transform: rotate(-226.28deg);
-}
-
-.hra .union-5 {
+  }
+  
+  .hra .union-5 {
     position: absolute;
     width: 14px;
     height: 14px;
     top: 3px;
     left: 3px;
     transform: rotate(-226.28deg);
-}
-
-.hra .JOKER-19 {
+  }
+  
+  .hra .JOKER-19 {
     position: absolute;
     width: 11px;
     height: 11px;
     top: 2px;
     left: 4px;
     transform: rotate(-226.28deg);
-}
-
-.hra .JOKER-20 {
+  }
+  
+  .hra .JOKER-20 {
     position: absolute;
     width: 13px;
     height: 9px;
     top: 3px;
     left: 5px;
     transform: rotate(-226.28deg);
-}
-
-.hra .overlap-10 {
+  }
+  
+  .hra .overlap-10 {
     position: relative;
     top: -49px;
     left: -29px;
-}
-
-.hra .hat-4 {
+  }
+  
+  .hra .hat-4 {
     position: absolute;
     width: 166px;
     height: 168px;
     top: 34px;
     left: 50px;
     transform: rotate(-46.28deg);
-}
-
-.hra .clothes-4 {
+  }
+  
+  .hra .clothes-4 {
     position: absolute;
     width: 186px;
     height: 188px;
     top: 136px;
     left: 39px;
     transform: rotate(-46.28deg);
-}
-
-.hra .face-4 {
+  }
+  
+  .hra .face-4 {
     position: absolute;
     width: 112px;
     height: 112px;
     top: 117px;
     left: 73px;
     transform: rotate(-46.28deg);
-}
-
-.hra .chin-4 {
+  }
+  
+  .hra .chin-4 {
     position: absolute;
     width: 19px;
     height: 20px;
     top: 197px;
     left: 118px;
     transform: rotate(-46.28deg);
-}
-
-.hra .teeth-4 {
+  }
+  
+  .hra .teeth-4 {
     position: absolute;
     width: 25px;
     height: 25px;
     top: 179px;
     left: 117px;
     transform: rotate(-46.28deg);
-}
-
-.hra .nose-4 {
+  }
+  
+  .hra .nose-4 {
     position: absolute;
     width: 35px;
     height: 34px;
     top: 153px;
     left: 112px;
     transform: rotate(-46.28deg);
-}
-
-.hra .eye-6 {
+  }
+  
+  .hra .eye-6 {
     position: absolute;
     width: 35px;
     height: 35px;
     top: 139px;
     left: 124px;
     transform: rotate(-46.28deg);
-}
-
-.hra .eye-7 {
+  }
+  
+  .hra .eye-7 {
     position: absolute;
     width: 36px;
     height: 36px;
     top: 137px;
     left: 99px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-21 {
+  }
+  
+  .hra .JOKER-21 {
     position: absolute;
     width: 12px;
     height: 14px;
     top: 41px;
     left: 3px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-22 {
+  }
+  
+  .hra .JOKER-22 {
     position: absolute;
     width: 13px;
     height: 13px;
     top: 16px;
     left: 3px;
     transform: rotate(-46.28deg);
-}
-
-.hra .union-6 {
+  }
+  
+  .hra .union-6 {
     position: absolute;
     width: 14px;
     height: 14px;
     top: 3px;
     left: 3px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-23 {
+  }
+  
+  .hra .JOKER-23 {
     position: absolute;
     width: 11px;
     height: 11px;
     top: 2px;
     left: 4px;
     transform: rotate(-46.28deg);
-}
-
-.hra .JOKER-24 {
+  }
+  
+  .hra .JOKER-24 {
     position: absolute;
     width: 13px;
     height: 9px;
     top: 3px;
     left: 5px;
     transform: rotate(-46.28deg);
-}
-
-.hra .offline-button {
+  }
+  
+  .hra .offline-button {
     position: absolute;
     width: 484px;
     height: 160px;
     top: 273px;
     left: 406px;
-}
-
-.hra .overlap-11 {
+  }
+  
+  .hra .overlap-11 {
     position: relative;
     width: 482px;
     height: 160px;
     border-radius: 15px;
-}
-
-.hra .group {
+  }
+  
+  .hra .group {
     position: absolute;
     width: 482px;
     height: 160px;
@@ -799,9 +794,9 @@
     left: 0;
     background-color: var(--light);
     border-radius: 15px;
-}
-
-.hra .overlap-group-4 {
+  }
+  
+  .hra .overlap-group-4 {
     position: relative;
     width: 466px;
     height: 146px;
@@ -809,9 +804,9 @@
     left: 8px;
     background-color: #000000;
     border-radius: 15px;
-}
-
-.hra .rectangle-2 {
+  }
+  
+  .hra .rectangle-2 {
     position: absolute;
     width: 452px;
     height: 132px;
@@ -824,25 +819,25 @@
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .element-software-cloud-no {
+  }
+  
+  .hra .element-software-cloud-no {
     position: absolute;
     width: 71px;
     height: 71px;
     top: 36px;
     left: 59px;
-}
-
-.hra .icon {
+  }
+  
+  .hra .icon {
     position: absolute;
     width: 65px;
     height: 63px;
     top: 4px;
     left: 3px;
-}
-
-.hra .text-wrapper {
+  }
+  
+  .hra .text-wrapper {
     position: absolute;
     top: 17px;
     left: 146px;
@@ -852,9 +847,9 @@
     font-size: 96px;
     letter-spacing: 0;
     line-height: normal;
-}
-
-.hra .text-wrapper-2 {
+  }
+  
+  .hra .text-wrapper-2 {
     position: absolute;
     width: 105px;
     top: 89px;
@@ -866,9 +861,9 @@
     text-align: center;
     letter-spacing: 0;
     line-height: 45px;
-}
-
-.hra .text-wrapper-3 {
+  }
+  
+  .hra .text-wrapper-3 {
     position: absolute;
     width: 100px;
     top: 89px;
@@ -880,9 +875,9 @@
     text-align: center;
     letter-spacing: 0;
     line-height: 45px;
-}
-
-.hra .text-wrapper-4 {
+  }
+  
+  .hra .text-wrapper-4 {
     position: absolute;
     width: 103px;
     top: 89px;
@@ -894,9 +889,9 @@
     text-align: center;
     letter-spacing: 0;
     line-height: 45px;
-}
-
-.hra .text-wrapper-5 {
+  }
+  
+  .hra .text-wrapper-5 {
     width: 125px;
     top: 89px;
     left: 243px;
@@ -908,9 +903,9 @@
     text-align: center;
     letter-spacing: 0;
     line-height: 45px;
-}
-
-.hra .text-wrapper-6 {
+  }
+  
+  .hra .text-wrapper-6 {
     position: absolute;
     width: 108px;
     top: 89px;
@@ -922,17 +917,17 @@
     text-align: center;
     letter-spacing: 0;
     line-height: 45px;
-}
-
-.hra .online-button {
+  }
+  
+  .hra .online-button {
     position: absolute;
     width: 484px;
     height: 160px;
     top: 273px;
     left: 0;
-}
-
-.hra .div-wrapper {
+  }
+  
+  .hra .div-wrapper {
     position: absolute;
     width: 482px;
     height: 160px;
@@ -940,17 +935,17 @@
     left: 0;
     background-color: var(--yellow-contrast);
     border-radius: 15px;
-}
-
-.hra .element-music-player-play {
+  }
+  
+  .hra .element-music-player-play {
     position: absolute;
     width: 71px;
     height: 71px;
     top: 36px;
     left: 120px;
-}
-
-.hra .icon-wrapper {
+  }
+  
+  .hra .icon-wrapper {
     position: relative;
     width: 47px;
     height: 59px;
@@ -958,17 +953,17 @@
     left: -42px;
     background-image: url(./img/icon-2.svg);
     background-size: 100% 100%;
-}
-
-.hra .icon-2 {
+  }
+  
+  .hra .icon-2 {
     position: absolute;
     width: 47px;
     height: 59px;
     top: 0;
     left: 0;
-}
-
-.hra .text-wrapper-7 {
+  }
+  
+  .hra .text-wrapper-7 {
     position: absolute;
     top: 18px;
     left: 141px;
@@ -978,38 +973,38 @@
     font-size: 96px;
     letter-spacing: 0;
     line-height: normal;
-}
-
-.hra .collection-button {
+  }
+  
+  .hra .collection-button {
     position: absolute;
     width: 528px;
     height: 160px;
     top: 448px;
     left: 233px;
-}
-
-.hra .overlap-12 {
+  }
+  
+  .hra .overlap-12 {
     position: relative;
     width: 530px;
     height: 160px;
-}
-
-.hra .collection-button-2 {
+  }
+  
+  .hra .collection-button-2 {
     position: absolute;
     width: 530px;
     height: 160px;
     top: 0;
     left: 0;
-}
-
-.hra .overlap-13 {
+  }
+  
+  .hra .overlap-13 {
     position: relative;
     width: 528px;
     height: 160px;
     border-radius: 15px;
-}
-
-.hra .group-2 {
+  }
+  
+  .hra .group-2 {
     position: absolute;
     width: 528px;
     height: 160px;
@@ -1017,9 +1012,9 @@
     left: 0;
     background-color: var(--light);
     border-radius: 15px;
-}
-
-.hra .rectangle-wrapper {
+  }
+  
+  .hra .rectangle-wrapper {
     position: relative;
     width: 512px;
     height: 146px;
@@ -1027,9 +1022,9 @@
     left: 8px;
     background-color: #000000;
     border-radius: 15px;
-}
-
-.hra .rectangle-3 {
+  }
+  
+  .hra .rectangle-3 {
     position: relative;
     width: 496px;
     height: 132px;
@@ -1042,9 +1037,9 @@
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .text-wrapper-8 {
+  }
+  
+  .hra .text-wrapper-8 {
     position: absolute;
     top: 17px;
     left: 98px;
@@ -1054,34 +1049,31 @@
     font-size: 96px;
     letter-spacing: 0;
     line-height: normal;
-}
-
-.hra .combined-shape {
+  }
+  
+  .hra .combined-shape {
     position: absolute;
     width: 59px;
     height: 59px;
     top: 49px;
     left: 31px;
-}
-
-.hra .profile-button {
+  }
+  
+  .hra .profile-button {
     position: absolute;
     width: 223px;
     height: 160px;
     top: 702px;
     left: 609px;
-    background-color: transparent;
-    border-color: transparent;
-    cursor: pointer;
-}
-
-.hra .overlap-14 {
+  }
+  
+  .hra .overlap-14 {
     position: relative;
     height: 160px;
     border-radius: 15px;
-}
-
-.hra .group-3 {
+  }
+  
+  .hra .group-3 {
     position: absolute;
     width: 223px;
     height: 160px;
@@ -1089,9 +1081,9 @@
     left: 0;
     background-color: var(--yellow-contrast);
     border-radius: 15px;
-}
-
-.hra .overlap-group-5 {
+  }
+  
+  .hra .overlap-group-5 {
     position: relative;
     width: 209px;
     height: 146px;
@@ -1099,9 +1091,9 @@
     left: 7px;
     background-color: #000000;
     border-radius: 15px;
-}
-
-.hra .rectangle-4 {
+  }
+  
+  .hra .rectangle-4 {
     position: relative;
     width: 195px;
     height: 132px;
@@ -1114,59 +1106,66 @@
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .element-basic-user {
+  }
+  
+  .hra .element-basic-user {
     position: absolute;
     width: 94px;
     height: 94px;
     top: 33px;
     left: 64px;
-}
-
-.hra .icon-3 {
+  }
+  
+  .hra .icon-3 {
     position: absolute;
     width: 86px;
     height: 86px;
     top: 4px;
     left: 4px;
-}
-
-.hra .div-2 {
+  }
+  
+  
+  .hra .div-2 {
     position: relative;
     width: 1440px;
     height: 1024px;
     background-color: #ffffff;
-}
-
-.hra .div-3 {
-    position: relative;
-    width: 100%; /* Scale to parent width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
-    max-height: 90vh; /* Ensure it doesn't exceed viewport height */
-    background-color: var(--dark); /* Background color for reference */
+  }
+  
+  .hra .NDiv-3 {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: var(--dark);
     margin-bottom: 61vw;
-}
+  }
 
-.hra .overlap-15 {
-    position: absolute;
+  .top-menu{
+    display: flex;
+    justify-items: side;
+  }
+  
+  
+  .hra .overlap-15 {
+
     width: 1141px;
     height: 324px;
     top: 754px;
     left: 297px;
-}
-
-.hra .bottom-menu {
+  }
+  
+  .hra .bottom-menu {
     position: absolute;
     width: 1141px;
     height: 270px;
     top: 0;
     left: 0;
     background-color: var(--light);
-}
-
-.hra .overlap-group-6 {
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  .hra .overlap-group-6 {
     position: relative;
     width: 1134px;
     height: 263px;
@@ -1174,49 +1173,49 @@
     left: 7px;
     background-color: #000000;
     border-radius: 15px 0px 0px 0px;
-}
-
-.hra .rectangle-5 {
+  }
+  
+  .hra .rectangle-5 {
     position: relative;
     width: 1127px;
     height: 256px;
     top: 7px;
     left: 7px;
-    border-radius: 15px 0px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     background: linear-gradient(
         180deg,
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .vtipkary {
+  }
+  
+  .hra .vtipkary {
     position: absolute;
     width: 1087px;
     height: 295px;
     top: 29px;
     left: 34px;
-}
-
-.hra .overlap-16 {
+  }
+  
+  .hra .overlap-16 {
     position: absolute;
     width: 203px;
     height: 295px;
     top: 0;
     left: 0;
-}
-
-.hra .rectangle-6 {
+  }
+  
+  .hra .rectangle-6 {
     position: absolute;
     width: 200px;
     height: 280px;
     top: 15px;
     left: 0;
     background-color: #d9d9d9;
-}
-
-.hra .queen-diamond-2 {
+  }
+  
+  .hra .queen-diamond-2 {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -1225,22 +1224,22 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-group-7 {
+  }
+  
+  .hra .overlap-group-7 {
     position: relative;
     height: 288px;
-}
-
-.hra .div-4 {
+  }
+  
+  .hra .div-4 {
     top: 0;
     left: 0;
     position: absolute;
     width: 35px;
     height: 73px;
-}
-
-.hra .text-wrapper-9 {
+  }
+  
+  .hra .text-wrapper-9 {
     position: absolute;
     top: 2px;
     left: 4px;
@@ -1252,44 +1251,44 @@
     letter-spacing: 0;
     line-height: 45px;
     white-space: nowrap;
-}
-
-.hra .corner-suits {
+  }
+  
+  .hra .corner-suits {
     position: absolute;
     width: 18px;
     height: 20px;
     top: 48px;
     left: 9px;
-}
-
-.hra .component {
+  }
+  
+  .hra .component {
     top: 215px;
     left: 168px;
     transform: rotate(-180deg);
     position: absolute;
     width: 35px;
     height: 73px;
-}
-
-.hra .corner-suits-2 {
+  }
+  
+  .hra .corner-suits-2 {
     position: absolute;
     width: 18px;
     height: 20px;
     top: 48px;
     left: 9px;
     transform: rotate(180deg);
-}
-
-.hra .img-2 {
+  }
+  
+  .hra .img-2 {
     position: absolute;
     width: 141px;
     height: 208px;
     top: 33px;
     left: 31px;
     object-fit: cover;
-}
-
-.hra .element-spades {
+  }
+  
+  .hra .element-spades {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -1298,26 +1297,26 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-17 {
+  }
+  
+  .hra .overlap-17 {
     position: absolute;
     width: 35px;
     height: 73px;
     top: 215px;
     left: 168px;
-}
-
-.hra .component-2 {
+  }
+  
+  .hra .component-2 {
     top: 0;
     left: 0;
     transform: rotate(-180deg);
     position: absolute;
     width: 35px;
     height: 73px;
-}
-
-.hra .text-wrapper-10 {
+  }
+  
+  .hra .text-wrapper-10 {
     top: 2px;
     left: 5px;
     font-family: "SF Compact Rounded-Regular", Helvetica;
@@ -1329,57 +1328,57 @@
     position: absolute;
     font-weight: 400;
     letter-spacing: 0;
-}
-
-.hra .group-4 {
+  }
+  
+  .hra .group-4 {
     position: absolute;
     width: 133px;
     height: 242px;
     top: 23px;
     left: 35px;
-}
-
-.hra .center-suits {
+  }
+  
+  .hra .center-suits {
     position: absolute;
     width: 45px;
     height: 50px;
     top: 0;
     left: 0;
-}
-
-.hra .center-suits-2 {
+  }
+  
+  .hra .center-suits-2 {
     height: 26px;
     top: 192px;
     left: 0;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-3 {
+  }
+  
+  .hra .center-suits-3 {
     height: 50px;
     top: 0;
     left: 88px;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-4 {
+  }
+  
+  .hra .center-suits-4 {
     height: 50px;
     top: 96px;
     left: 44px;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-5 {
+  }
+  
+  .hra .center-suits-5 {
     height: 26px;
     top: 192px;
     left: 88px;
     position: absolute;
     width: 45px;
-}
-
-.hra .element-hearts {
+  }
+  
+  .hra .element-hearts {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -1388,9 +1387,9 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .text-wrapper-11 {
+  }
+  
+  .hra .text-wrapper-11 {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -1402,65 +1401,65 @@
     letter-spacing: -4.1px;
     line-height: 45px;
     white-space: nowrap;
-}
-
-.hra .overlap-18 {
+  }
+  
+  .hra .overlap-18 {
     position: absolute;
     width: 133px;
     height: 114px;
     top: 0;
     left: 0;
-}
-
-.hra .center-suits-6 {
+  }
+  
+  .hra .center-suits-6 {
     height: 50px;
     top: 64px;
     left: 0;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-7 {
+  }
+  
+  .hra .center-suits-7 {
     height: 50px;
     top: 64px;
     left: 88px;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-8 {
+  }
+  
+  .hra .center-suits-8 {
     height: 50px;
     top: 32px;
     left: 44px;
     position: absolute;
     width: 45px;
-}
-
-.hra .overlap-group-8 {
+  }
+  
+  .hra .overlap-group-8 {
     position: absolute;
     width: 133px;
     height: 90px;
     top: 128px;
     left: 0;
-}
-
-.hra .center-suits-9 {
+  }
+  
+  .hra .center-suits-9 {
     height: 26px;
     top: 64px;
     left: 0;
     position: absolute;
     width: 45px;
-}
-
-.hra .center-suits-10 {
+  }
+  
+  .hra .center-suits-10 {
     height: 26px;
     top: 64px;
     left: 88px;
     position: absolute;
     width: 45px;
-}
-
-.hra .king-spades {
+  }
+  
+  .hra .king-spades {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -1469,9 +1468,9 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .ace-spades {
+  }
+  
+  .hra .ace-spades {
     position: absolute;
     width: 203px;
     height: 288px;
@@ -1480,504 +1479,460 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .component-3 {
+  }
+  
+  .hra .component-3 {
     position: relative;
     height: 73px;
-}
-
-.hra .center-suits-11 {
+  }
+  
+  .hra .center-suits-11 {
     height: 50px;
     top: 119px;
     left: 79px;
     position: absolute;
     width: 45px;
-}
-
-.hra .overlap-19 {
-    position: absolute;
+  }
+  
+  .hra .overlap-19 {
     width: 287px;
-    height: 897px;
+    height: 150%;
     top: 219px;
     left: 0;
-}
-
-.hra .jokers {
+  }
+  
+  .hra .jokers {
     position: absolute;
     width: 287px;
     height: 804px;
     top: 0;
     left: 0;
     background-color: var(--yellow-light);
-}
-
-.hra .img-wrapper {
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  .hra .img-wrapper {
     position: relative;
     width: 280px;
     height: 797px;
     top: 7px;
     background-color: #000000;
     border-radius: 0px 15px 0px 0px;
-}
-
-.hra .rectangle-7 {
+  }
+  
+  .hra .rectangle-7 {
     position: absolute;
     width: 273px;
     height: 790px;
     top: 7px;
     left: 0;
-}
-
-.hra .visual-jokers {
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  .hra .visual-jokers {
     position: absolute;
     width: 203px;
     height: 828px;
     top: 69px;
-    left: 37px;
-}
-
-.hra .overlap-20 {
+    left: 37px; 
+  }
+  
+  .hra .overlap-20 {
     position: relative;
     height: 828px;
-}
-
-.hra .rectangle-8 {
+  }
+  
+  .hra .rectangle-8 {
     position: absolute;
     width: 200px;
     height: 280px;
     top: 260px;
     left: 0;
     background-color: #000000;
-}
-
-.hra .joker-5 {
+  }
+  
+  .hra .joker-5 {
     position: absolute;
     top: 0;
     left: 0;
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-group-9 {
+  }
+  
+  .hra .overlap-group-9 {
     position: relative;
     width: 61px;
     height: 78px;
-}
-
-.hra .hat-5 {
+  }
+  
+  .hra .hat-5 {
     position: absolute;
     width: 59px;
     height: 34px;
     top: 0;
     left: 1px;
-}
-
-.hra .clothes-5 {
+  }
+  
+  .hra .clothes-5 {
     position: absolute;
     width: 61px;
     height: 40px;
     top: 38px;
     left: 0;
-}
-
-.hra .face-5 {
+  }
+  
+  .hra .face-5 {
     position: absolute;
     width: 31px;
     height: 31px;
     top: 21px;
     left: 14px;
-}
-
-.hra .chin-5 {
+  }
+  
+  .hra .chin-5 {
     position: absolute;
     width: 8px;
     height: 4px;
     top: 47px;
     left: 25px;
-}
-
-.hra .teeth-5 {
+  }
+  
+  .hra .teeth-5 {
     position: absolute;
     width: 9px;
     height: 6px;
     top: 41px;
     left: 25px;
-}
-
-.hra .nose-5 {
+  }
+  
+  .hra .nose-5 {
     position: absolute;
     width: 8px;
     height: 12px;
     top: 30px;
     left: 25px;
-}
-
-.hra .eye-8 {
+  }
+  
+  .hra .eye-8 {
     position: absolute;
     width: 10px;
     height: 10px;
     top: 25px;
     left: 29px;
-}
-
-.hra .eye-9 {
+  }
+  
+  .hra .eye-9 {
     position: absolute;
     width: 10px;
     height: 10px;
     top: 25px;
     left: 20px;
-}
-
-.hra .JOKER-25 {
+  }
+  
+  .hra .JOKER-25 {
     position: absolute;
     width: 3px;
     height: 4px;
     top: 19px;
     left: 0;
-}
-
-.hra .JOKER-26 {
+  }
+  
+  .hra .JOKER-26 {
     position: absolute;
     width: 3px;
     height: 4px;
     top: 14px;
     left: 0;
-}
-
-.hra .union-7 {
+  }
+  
+  .hra .union-7 {
     position: absolute;
     width: 3px;
     height: 4px;
     top: 9px;
     left: 0;
-}
-
-.hra .JOKER-27 {
+  }
+  
+  .hra .JOKER-27 {
     position: absolute;
     width: 3px;
     height: 3px;
     top: 5px;
     left: 0;
-}
-
-.hra .JOKER-28 {
+  }
+  
+  .hra .JOKER-28 {
     position: absolute;
     width: 3px;
     height: 4px;
     top: 0;
     left: 0;
-}
-
-.hra .JOKER-29 {
+  }
+  
+  .hra .JOKER-29 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 51px;
     left: 0;
     transform: rotate(-180deg);
-}
-
-.hra .JOKER-30 {
+  }
+  
+  .hra .JOKER-30 {
     position: absolute;
     width: 8px;
     height: 11px;
     top: 37px;
     left: 0;
     transform: rotate(-180deg);
-}
-
-.hra .union-8 {
+  }
+  
+  .hra .union-8 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 25px;
     left: 0;
     transform: rotate(-180deg);
-}
-
-.hra .JOKER-31 {
+  }
+  
+  .hra .JOKER-31 {
     position: absolute;
     width: 9px;
     height: 9px;
     top: 12px;
     left: 0;
     transform: rotate(-180deg);
-}
-
-.hra .JOKER-32 {
+  }
+  
+  .hra .JOKER-32 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 0;
     left: 0;
     transform: rotate(-180deg);
-}
-
-.hra .overlap-21 {
+  }
+  
+  .hra .overlap-21 {
     position: relative;
     width: 162px;
     height: 207px;
     top: -1px;
     left: -1px;
-}
-
-.hra .hat-6 {
+  }
+  
+  .hra .hat-6 {
     position: absolute;
     width: 157px;
     height: 90px;
     top: 0;
     left: 3px;
-}
-
-.hra .clothes-6 {
+  }
+  
+  .hra .clothes-6 {
     position: absolute;
     width: 162px;
     height: 107px;
     top: 100px;
     left: 0;
-}
-
-.hra .face-6 {
+  }
+  
+  .hra .face-6 {
     position: absolute;
     width: 81px;
     height: 82px;
     top: 57px;
     left: 37px;
-}
-
-.hra .chin-6 {
+  }
+  
+  .hra .chin-6 {
     position: absolute;
     width: 20px;
     height: 12px;
     top: 124px;
     left: 67px;
-}
-
-.hra .teeth-6 {
+  }
+  
+  .hra .teeth-6 {
     position: absolute;
     width: 23px;
     height: 15px;
     top: 109px;
     left: 66px;
-}
-
-.hra .nose-6 {
+  }
+  
+  .hra .nose-6 {
     position: absolute;
     width: 22px;
     height: 31px;
     top: 79px;
     left: 67px;
-}
-
-.hra .eye-10 {
+  }
+  
+  .hra .eye-10 {
     position: absolute;
     width: 27px;
     height: 26px;
     top: 67px;
     left: 77px;
-}
-
-.hra .eye-11 {
+  }
+  
+  .hra .eye-11 {
     position: absolute;
     width: 27px;
     height: 27px;
     top: 65px;
     left: 52px;
-}
-
-.hra .JOKER-33 {
+  }
+  
+  .hra .JOKER-33 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 51px;
     left: 0;
-}
-
-.hra .JOKER-34 {
+  }
+  
+  .hra .JOKER-34 {
     position: absolute;
     width: 8px;
     height: 11px;
     top: 37px;
     left: 0;
-}
-
-.hra .union-9 {
+  }
+  
+  .hra .union-9 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 25px;
     left: 0;
-}
-
-.hra .JOKER-35 {
+  }
+  
+  .hra .JOKER-35 {
     position: absolute;
     width: 9px;
     height: 9px;
     top: 12px;
     left: 0;
-}
-
-.hra .JOKER-36 {
+  }
+  
+  .hra .JOKER-36 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 0;
     left: 0;
-}
-
-.hra .joker-6 {
+  }
+  
+  .hra .joker-6 {
     position: absolute;
     top: 120px;
     left: 0;
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .joker-7 {
+  }
+  
+  .hra .joker-7 {
     position: absolute;
     top: 260px;
     left: 0;
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .joker-8 {
+  }
+  
+  .hra .joker-8 {
     position: absolute;
     top: 400px;
     left: 0;
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .joker-9 {
+  }
+  
+  .hra .joker-9 {
     position: absolute;
     top: 540px;
     left: 0;
     width: 203px;
     height: 288px;
     box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .overlap-group-10 {
+  }
+  
+  .hra .overlap-group-10 {
     position: relative;
     width: 61px;
     height: 72px;
-}
-
-.hra .clothes-7 {
-    position: absolute;
-    width: 61px;
-    height: 34px;
-    top: 38px;
-    left: 0;
-}
-
-.hra .JOKER-37 {
-    position: absolute;
-    width: 9px;
-    height: 11px;
-    top: 533px;
-    left: 3943px;
-    transform: rotate(-180deg);
-}
-
-.hra .JOKER-38 {
-    position: absolute;
-    width: 8px;
-    height: 11px;
-    top: 547px;
-    left: 3944px;
-    transform: rotate(-180deg);
-}
-
-.hra .union-10 {
+  }
+  
+  .hra .union-10 {
     position: absolute;
     width: 9px;
     height: 11px;
     top: 559px;
     left: 3943px;
     transform: rotate(-180deg);
-}
-
-.hra .JOKER-39 {
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    top: 573px;
-    left: 3943px;
-    transform: rotate(-180deg);
-}
-
-.hra .JOKER-40 {
-    position: absolute;
-    width: 9px;
-    height: 11px;
-    top: 584px;
-    left: 3943px;
-    transform: rotate(-180deg);
-}
-
-.hra .overlap-22 {
+  }
+  
+  .hra .overlap-22 {
     position: relative;
     width: 162px;
     height: 148px;
     top: -1px;
     left: -1px;
-}
-
-.hra .clothes-8 {
+  }
+  
+  .hra .clothes-8 {
     position: absolute;
     width: 162px;
     height: 48px;
     top: 100px;
     left: 0;
-}
-
-.hra .your-score {
-    position: absolute;
+  }
+  
+  .hra .your-score {
     width: 444px;
     height: 209px;
     top: 0;
     left: 0;
-}
-
-.hra .overlap-23 {
+  }
+  
+  .hra .overlap-23 {
     position: relative;
     width: 442px;
     height: 209px;
     background-color: var(--light);
-    border-radius: 0px 0px 15px 0px;
-}
-
-.hra .rectangle-9 {
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  .hra .rectangle-9 {
     position: absolute;
     width: 435px;
     height: 202px;
     top: 0;
     left: 0;
-}
-
-.hra .rectangle-10 {
+  }
+  
+  .hra .rectangle-10 {
     position: absolute;
     width: 428px;
     height: 195px;
     top: 0;
     left: 0;
-    border-radius: 0px 0px 15px 0px;
+    border-radius: 15px 15px 15px 15px;
     background: linear-gradient(
         180deg,
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .text-wrapper-12 {
+  }
+  
+  .hra .text-wrapper-12 {
     top: 13px;
     left: 175px;
     font-family: "Madimi One-Regular", Helvetica;
@@ -1987,49 +1942,48 @@
     position: absolute;
     font-weight: 400;
     letter-spacing: 0;
-}
-
-.hra .enemy-score {
-    position: absolute;
+  }
+  
+  .hra .enemy-score {
     width: 444px;
     height: 209px;
     top: 0;
     left: 998px;
-}
-
-.hra .overlap-24 {
+  }
+  
+  .hra .overlap-24 {
     position: relative;
     width: 442px;
     height: 209px;
     border-radius: 0px 0px 15px 0px;
-}
-
-.hra .rectangle-11 {
+  }
+  
+  .hra .rectangle-11 {
     position: absolute;
     width: 442px;
     height: 209px;
     top: 0;
     left: 0;
     background-color: var(--yellow-contrast);
-    border-radius: 0px 0px 15px 0px;
+    border-radius: 15px 15px 15px 15px;
     transform: rotate(180deg);
-}
-
-.hra .rectangle-12 {
+  }
+  
+  .hra .rectangle-12 {
     position: absolute;
     width: 435px;
     height: 202px;
     top: 0;
     left: 7px;
-}
-
-.hra .rectangle-13 {
+  }
+  
+  .hra .rectangle-13 {
     position: absolute;
     width: 428px;
     height: 195px;
     top: 0;
     left: 14px;
-    border-radius: 0px 0px 15px 0px;
+    border-radius: 15px 15px 15px 15px;
     transform: rotate(180deg);
     background: linear-gradient(
         180deg,
@@ -2037,9 +1991,9 @@
         rgba(239, 239, 239, 0.6) 100%
     );
     background-color: var(--fade-black);
-}
-
-.hra .text-wrapper-13 {
+  }
+  
+  .hra .text-wrapper-13 {
     top: 13px;
     left: 189px;
     font-family: "Madimi One-Regular", Helvetica;
@@ -2049,9 +2003,9 @@
     position: absolute;
     font-weight: 400;
     letter-spacing: 0;
-}
-
-.hra .overlap-25 {
+  }
+  
+  .hra .overlap-25 {
     position: relative;
     width: 100%; /* Scale to parent width */
     height: 98vh; /* Maintain aspect ratio */
@@ -2060,95 +2014,95 @@
     margin-top: 29vw;
     overflow-y: auto;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Custom scrollbar styles */
-.hra .overlap-25::-webkit-scrollbar {
+  }
+  
+  /* Custom scrollbar styles */
+  .hra .overlap-25::-webkit-scrollbar {
     width: 8px; /* Set width of scrollbar */
-}
-
-.hra .overlap-25::-webkit-scrollbar-thumb {
+  }
+  
+  .hra .overlap-25::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.3); /* Light color for the thumb */
     border-radius: 10px; /* Rounded edges */
     border: 2px solid rgba(0, 0, 0, 0.2); /* Optional: border to give it more visibility */
-}
-
-.hra .overlap-25::-webkit-scrollbar-thumb:hover {
+  }
+  
+  .hra .overlap-25::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.6); /* Darker on hover */
-}
-
-.hra .overlap-25::-webkit-scrollbar-track {
+  }
+  
+  .hra .overlap-25::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.1); /* Track color */
     border-radius: 10px;
-}
-
-.hra .background {
+  }
+  
+  .hra .background {
     position: absolute;
     width: 1369px;
     height: 987px;
     top: 0;
     left: 0;
-}
-
-.hra .overlap-group-11 {
+  }
+  
+  .hra .overlap-group-11 {
     position: relative;
     height: 987px;
     border-radius: 15px 15px 0px 0px;
-}
-
-.hra .rectangle-14 {
+  }
+  
+  .hra .rectangle-14 {
     position: absolute;
     width: 1369px;
     height: 987px;
     top: 0;
     left: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     background-color: var(--yellow-contrast);
     transform: rotate(180deg);
-}
-
-.hra .rectangle-15 {
+  }
+  
+  .hra .rectangle-15 {
     position: absolute;
     width: 1355px;
     height: 979px;
     top: 8px;
     left: 7px;
     background-color: #000000;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     transform: rotate(180deg);
-}
-
-.hra .rectangle-16 {
+  }
+  
+  .hra .rectangle-16 {
     position: absolute;
     width: 1341px;
     height: 971px;
     top: 16px;
     left: 14px;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     transform: rotate(180deg);
     background: linear-gradient(
         180deg,
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
-}
-
-.hra .deck {
+  }
+  
+  .hra .deck {
     position: absolute;
     width: 1280px;
     height: 362px;
     top: 23px;
     left: 45px;
-}
-
-.hra .rectangle-17 {
+  }
+  
+  .hra .rectangle-17 {
     height: 362px;
     border-radius: 15px;
     background-color: var(--yellow-contrast);
     transform: rotate(180deg);
-}
-
-.hra .collection-vtipkary {
+  }
+  
+  .hra .collection-vtipkary {
     display: flex;
     flex-wrap: wrap;
     width: 1281px;
@@ -2157,30 +2111,23 @@
     position: absolute;
     top: 60px;
     left: 76px;
-}
-
-.hra .joker-10 {
-    position: relative;
-    width: 203px;
-    height: 288px;
-    box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.hra .mana {
+  }
+  
+  .hra .mana {
     position: absolute;
     width: 281px;
     height: 110px;
     top: 403px;
     left: 45px;
-}
-
-.hra .overlap-26 {
+  }
+  
+  .hra .overlap-26 {
     position: relative;
     height: 110px;
     border-radius: 15px;
-}
-
-.hra .rectangle-18 {
+  }
+  
+  .hra .rectangle-18 {
     position: absolute;
     width: 281px;
     height: 110px;
@@ -2193,104 +2140,104 @@
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
-}
-
-.hra .subtract {
+  }
+  
+  .hra .subtract {
     top: 13px;
     left: 31px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-2 {
+  }
+  
+  .hra .subtract-2 {
     top: 57px;
     left: 31px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-3 {
+  }
+  
+  .hra .subtract-3 {
     top: 13px;
     left: 76px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-4 {
+  }
+  
+  .hra .subtract-4 {
     top: 57px;
     left: 76px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-5 {
+  }
+  
+  .hra .subtract-5 {
     top: 13px;
     left: 121px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-6 {
+  }
+  
+  .hra .subtract-6 {
     top: 57px;
     left: 121px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-7 {
+  }
+  
+  .hra .subtract-7 {
     top: 13px;
     left: 166px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-8 {
+  }
+  
+  .hra .subtract-8 {
     top: 57px;
     left: 166px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-9 {
+  }
+  
+  .hra .subtract-9 {
     top: 13px;
     left: 211px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .subtract-10 {
+  }
+  
+  .hra .subtract-10 {
     top: 57px;
     left: 211px;
     position: absolute;
     width: 40px;
     height: 40px;
-}
-
-.hra .baterka {
+  }
+  
+  .hra .baterka {
     position: absolute;
     width: 216px;
     height: 110px;
     top: 401px;
     left: 657px;
-}
-
-.hra .overlap-27 {
+  }
+  
+  .hra .overlap-27 {
     position: relative;
     width: 214px;
     height: 110px;
     border-radius: 15px;
-}
-
-.hra .rectangle-19 {
+  }
+  
+  .hra .rectangle-19 {
     position: absolute;
     width: 214px;
     height: 110px;
@@ -2303,25 +2250,25 @@
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
-}
-
-.hra .element-gadgets-battery {
+  }
+  
+  .hra .element-gadgets-battery {
     position: absolute;
     width: 58px;
     height: 58px;
     top: 27px;
     left: 127px;
-}
-
-.hra .icon-4 {
+  }
+  
+  .hra .icon-4 {
     position: absolute;
     width: 53px;
     height: 29px;
     top: 15px;
     left: 0;
-}
-
-.hra .text-wrapper-14 {
+  }
+  
+  .hra .text-wrapper-14 {
     position: absolute;
     top: 14px;
     left: 25px;
@@ -2331,57 +2278,57 @@
     font-size: 64px;
     letter-spacing: 0;
     line-height: normal;
-}
-
-.hra .peniazky {
+  }
+  
+  .hra .peniazky {
     position: absolute;
     width: 216px;
     height: 110px;
     top: 402px;
     left: 884px;
-}
-
-.hra .element-maps-radar {
+  }
+  
+  .hra .element-maps-radar {
     position: absolute;
     width: 58px;
     height: 58px;
     top: 26px;
     left: 127px;
-}
-
-.hra .icon-5 {
+  }
+  
+  .hra .icon-5 {
     position: absolute;
     width: 53px;
     height: 53px;
     top: 2px;
     left: 2px;
-}
-
-.hra .no-sak-sort-peniaze {
+  }
+  
+  .hra .no-sak-sort-peniaze {
     position: absolute;
     width: 216px;
     height: 110px;
     top: 402px;
     left: 1111px;
-}
-
-.hra .combined-shape-2 {
+  }
+  
+  .hra .combined-shape-2 {
     position: absolute;
     width: 48px;
     height: 48px;
     top: 30px;
     left: 132px;
-}
-
-.hra .reverse-group {
+  }
+  
+  .hra .reverse-group {
     position: absolute;
     width: 72px;
     height: 110px;
     top: 401px;
     left: 572px;
-}
-
-.hra .rectangle-20 {
+  }
+  
+  .hra .rectangle-20 {
     position: absolute;
     width: 72px;
     height: 110px;
@@ -2394,40 +2341,40 @@
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
-}
-
-.hra .icon-6 {
+  }
+  
+  .hra .icon-6 {
     position: absolute;
     width: 35px;
     height: 43px;
     top: 13px;
     left: 18px;
-}
-
-.hra .icon-7 {
+  }
+  
+  .hra .icon-7 {
     position: absolute;
     width: 35px;
     height: 43px;
     top: 58px;
     left: 18px;
-}
-
-.hra .tvoje-peniaze {
+  }
+  
+  .hra .tvoje-peniaze {
     position: absolute;
     width: 243px;
     height: 110px;
     top: 529px;
     left: 1085px;
-}
-
-.hra .overlap-28 {
+  }
+  
+  .hra .overlap-28 {
     position: relative;
     width: 241px;
     height: 110px;
     border-radius: 15px;
-}
-
-.hra .rectangle-21 {
+  }
+  
+  .hra .rectangle-21 {
     position: absolute;
     width: 241px;
     height: 110px;
@@ -2440,9 +2387,9 @@
         rgba(239, 239, 239, 0.08) 0%,
         rgba(239, 239, 239, 0.6) 100%
     );
-}
-
-.hra .text-wrapper-15 {
+  }
+  
+  .hra .text-wrapper-15 {
     top: 15px;
     left: 19px;
     font-family: "Mada-Regular", Helvetica;
@@ -2452,20 +2399,21 @@
     position: absolute;
     font-weight: 400;
     letter-spacing: 0;
-}
-
-.hra .element-maps-radar-2 {
+  }
+  
+  .hra .element-maps-radar-2 {
     position: absolute;
     width: 58px;
     height: 58px;
     top: 28px;
     left: 133px;
-}
-
-.hra .icon-8 {
+  }
+  
+  .hra .icon-8 {
     position: absolute;
     width: 53px;
     height: 53px;
     top: 0;
     left: 29px;
-}
+  }
+  
