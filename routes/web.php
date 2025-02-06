@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,3 +20,7 @@ Route::post('/login', [AccountController::class, 'login']);
 
 Route::get('/register', [AccountController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AccountController::class, 'register']);
+
+Route::post('/game/{id}/update-score', [GameController::class, 'updateScore']);
+
+Route::post('/game/{id}/join', [GameController::class, 'joinGame']);
