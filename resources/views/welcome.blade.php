@@ -727,6 +727,33 @@
         
         ["None",0,0,(cards)=>true]
     ]
+    // ----------------------------------------------------------------
+    let playerData = {
+        "username" : "user1",
+        "id" : 0,
+        "data" : {
+            "jokers" : [0,1,3,4],
+            "money" : 3000,
+            "decksUnlocked" : [0],
+        },
+        "ingame" : true,
+        "gameid" : 32,
+        "oponentid" : 1,
+        "gamedata" : {
+
+        },
+    };
+    // ukazka kodu pre hraca v pripade ze hrac neni v hre tak in game je false a ostatne budu nastavene na -1
+    
+
+    
+
+    
+    
+    
+    
+    
+    // tu su vsetky premenne pouzite pocas hry
     let gameJokers = [
         ["J1",0,"Jonkler.png","inf1",[[0,()=>true,()=>{setMainPoint(0,getvariable(0,0))}]],[2]],
         ["J7",6,"Jonkler.png","inf7",[[1,()=>getNumOfTags("K")>0||getNumOfTags("Q")>0,()=>{C(getvariable(6,0));setVariable(6,0,getvariable(6,0)+1);setMainPoint(0,getvariable(6,0))}]],[1]]
