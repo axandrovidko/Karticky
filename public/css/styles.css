@@ -5,12 +5,12 @@
     left: 0;
     width: 100vw; 
     height: 100vh; 
-    overflow: hidden;
     background-color: var(
         --dark
     );
+    overflow: hidden;
   }
-  
+
   .hra .div {
     width: 100%; /* Scale to parent width */
     height: auto; /* Maintain aspect ratio */
@@ -1138,49 +1138,50 @@
     max-width: 100vw;
     max-height: 100vh;
     background-color: var(--dark);
-    margin-bottom: 61vw;
   }
 
   .top-menu{
     display: flex;
     justify-items: side;
+    height: 27%;
   }
-  
-  
-  .hra .overlap-15 {
 
-    width: 1141px;
-    height: 324px;
-    top: 754px;
-    left: 297px;
-  }
-  
-  .hra .bottom-menu {
-    position: absolute;
-    width: 1141px;
-    height: 270px;
-    top: 0;
-    left: 0;
+  .flex-boxGame{
+    width: 100%;
+    height: 60%;
+    display: flex;
+  }  
+
+
+  .bottom-menu2{
     background-color: var(--light);
     border-radius: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    float: right;
+    width: 78vw;
+    display: flex;
+    height: 50%;
+    margin-top: 44vh;
+    margin-left: 2vw;
   }
   
   .hra .overlap-group-6 {
     position: relative;
-    width: 1134px;
-    height: 263px;
-    top: 7px;
-    left: 7px;
+    width: 76vw;
+    height: 28vh;
+    top: 1vh;
+    left: 1vw;
     background-color: #000000;
-    border-radius: 15px 0px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
   }
   
   .hra .rectangle-5 {
     position: relative;
-    width: 1127px;
-    height: 256px;
-    top: 7px;
-    left: 7px;
+    width: 74vw;
+    height: 27vh;
+    top: 1vh;
+    left: 1vw;
     border-radius: 15px 15px 15px 15px;
     background: linear-gradient(
         180deg,
@@ -1191,11 +1192,7 @@
   }
   
   .hra .vtipkary {
-    position: absolute;
-    width: 1087px;
-    height: 295px;
-    top: 29px;
-    left: 34px;
+    display: flex;
   }
   
   .hra .overlap-16 {
@@ -1502,9 +1499,11 @@
   }
   
   .hra .jokers {
-    position: absolute;
-    width: 287px;
-    height: 804px;
+    width: 20vw;
+    height: 82vh;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
     top: 0;
     left: 0;
     background-color: var(--yellow-light);
@@ -1513,17 +1512,17 @@
   
   .hra .img-wrapper {
     position: relative;
-    width: 280px;
-    height: 797px;
+    width: 90%;
+    height: 98%;
     top: 7px;
     background-color: #000000;
-    border-radius: 0px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
   }
   
   .hra .rectangle-7 {
     position: absolute;
-    width: 273px;
-    height: 790px;
+    width: 100%;
+    height: 100%;
     top: 7px;
     left: 0;
     border-radius: 15px 15px 15px 15px;
