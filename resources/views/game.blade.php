@@ -12,6 +12,7 @@
       <div class="top-menu">
         <div class="your-score">
           <div class="overlap-23">
+            <div class="rectangle-9"></div>
             <div class="rectangle-10"></div>
             <div class="text-wrapper-12">0</div>
           </div>
@@ -26,13 +27,13 @@
       </div>
 <div class="flex-boxGame">
 <div class="jokers">
-  <div class="img-wrapper"><img class="rectangle-7"/></div>
+  <div class="img-wrapper"><div class="rectangle-7"></div></div>
 </div>
   <div class="bottom-menu2">
     <div>
       <div class="overlap-15">
         <div class="bottom-menu">
-          <div class="overlap-group-6"><div class="rectangle-5"></div></div>
+          <div class="rectangle-5"></div>
         </div>
       </div>
     </div>
