@@ -2005,10 +2005,8 @@
   .hra .overlap-25 {
     position: relative;
     width: 100%; /* Scale to parent width */
-    height: 98vh; /* Maintain aspect ratio */
-    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
+    height: 98vh; /* Maintain aspect ratio */ /* Ensure it doesn't exceed viewport width */
     background-color: var(--dark); /* Background color for reference */
-    margin-top: 29vw;
     overflow-y: auto;
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
