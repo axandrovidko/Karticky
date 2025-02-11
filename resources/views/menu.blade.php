@@ -9,10 +9,7 @@
 </head>
 
 <body>
-<div class="MainScreen">
     <div class="hra">
-        <div class="UpperGame">
-        <div class="div">
             <div class="overlap">
                 <div class="overlap-group">
                     <div class="rectangle"></div>
@@ -122,66 +119,82 @@
                             </div>
                         </div>
                     </div>
-                    <div class="offline-button" id="offlineButton">
-                        <div class="overlap-11">
-                            <div class="group">
-                                <div class="overlap-group-4">
-                                    <div class="rectangle-2"></div>
-                                    <div class="element-software-cloud-no"><img class="icon"
-                                            src="images/cloud_offline.png" /></div>
-                                </div>
-                            </div>
-                            <div class="text-wrapper">Offline</div>
-                        </div>
-                    </div>
                     <div class="text-wrapper-2">J</div>
                     <div class="text-wrapper-3">r</div>
                     <div class="text-wrapper-4">e</div>
                     <div class="text-wrapper-5">k</div>
                     <div class="text-wrapper-6">o</div>
-                </div>
-                <div class="online-button" id="onlineButton">
-                    <div class="overlap-11">
-                        <div class="div-wrapper">
-                            <div class="overlap-group-4">
-                                <div class="rectangle-2"></div>
-                                <div class="element-music-player-play">
-                                    <div class="icon-wrapper"><img class="icon-2" src="images/play.png" /></div>
-                                </div>
-                            </div>
+
+<div class="buttons">
+    <div class="top-2">
+        <div class="collection-button" id="collectionButton">
+            <div class="overlap-12">
+                <div class="collection-button-2">
+                    <div class="overlap-13">
+                        <div class="group-2">
+                                <div class="rectangle-3"></div>
                         </div>
-                        <div class="text-wrapper-7">Online</div>
-                    </div>
-                </div>
-                <div class="collection-button" id="collectionButton">
-                    <div class="overlap-12">
-                        <div class="collection-button-2">
-                            <div class="overlap-13">
-                                <div class="group-2">
-                                    <div class="rectangle-wrapper">
-                                        <div class="rectangle-3"></div>
-                                    </div>
-                                </div>
-                                <div class="text-wrapper-8">Collection</div>
-                            </div>
-                        </div>
-                        <img class="combined-shape" src="images/dots_collection.png" />
+                        <div class="text-wrapper-8">Online</div>
                     </div>
                 </div>
             </div>
-            <div class="profile-button" id="profileButton">
-                <div class="overlap-14">
-                    <div class="group-3">
-                        <div class="overlap-group-5">
-                            <div class="rectangle-4"></div>
+        </div>
+        <div class="collection-button-2" id="collectionButton">
+            <div class="overlap-12-2">
+                <div class="collection-button-2">
+                    <div class="overlap-13-2">
+                        <div class="group-2-2">
+                                <div class="rectangle-3-2"></div>
                         </div>
+                        <div class="text-wrapper-8-2">Offline</div>
                     </div>
-                    <div class="element-basic-user"><img class="icon-3" src="/images/user.png" /></div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <div class="bottom-2">
+        <div class="collection-button" id="collectionButton">
+            <div class="overlap-12">
+                <div class="collection-button-2">
+                    <div class="overlap-13">
+                        <div class="group-2">
+                                <div class="rectangle-3"></div>
+                        </div>
+                        <div class="text-wrapper-8">Online</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-button-2" id="collectionButton">
+            <div class="overlap-12-2">
+                <div class="collection-button-2">
+                    <div class="overlap-13-2">
+                        <div class="group-2-2">
+                                <div class="rectangle-3-2"></div>
+                        </div>
+                        <div class="text-wrapper-8-2">Offline</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="collection-button-2" id="collectionButton">
+        <div class="overlap-12-2">
+            <div class="collection-button-2">
+                <div class="overlap-13-2">
+                    <div class="group-2-2">
+                            <div class="rectangle-3-2"></div>
+                    </div>
+                    <div class="text-wrapper-8-2">Offline</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+            </div>
 </div>
 </body>
 
@@ -206,46 +219,4 @@
     document.getElementById("profileButton").addEventListener("click", function() {
         alert("Opening profile...");
     });
-
-    function scaleContent() {
-        let mainScreen = document.querySelector('.MainScreen');
-        let scaleX = window.innerWidth / screen.width;
-        let scaleY = window.innerHeight / screen.height;
-        let scale = Math.min(scaleX, scaleY); // Maintain aspect ratio
-
-        mainScreen.style.transform = `scale(${scale})`;
-    }
-
-    window.addEventListener('resize', scaleContent);
-    window.addEventListener('load', scaleContent);
-
-    function scaleContent() {
-        let mainScreen = document.querySelector('.UpperGame'); // Ensure this is correct
-        if (!mainScreen) return; // Prevent errors if element is not found
-
-        const DESIGN_WIDTH = 1920;
-        const DESIGN_HEIGHT = 1080;
-
-        let viewportWidth = window.innerWidth;
-        let viewportHeight = window.innerHeight;
-
-        let scaleX = viewportWidth / DESIGN_WIDTH;
-        let scaleY = viewportHeight / DESIGN_HEIGHT;
-        let scale = Math.min(scaleX, scaleY); 
-
-        mainScreen.style.transform = `scale(${scale})`;
-        mainScreen.style.transformOrigin = "top left"; 
-
-        let scaledWidth = DESIGN_WIDTH * scale;
-        let scaledHeight = DESIGN_HEIGHT * scale;
-        let leftOffset = (viewportWidth - scaledWidth) / 2;
-        let topOffset = (viewportHeight - scaledHeight) / 2;
-
-        mainScreen.style.position = "absolute";
-        mainScreen.style.left = `${leftOffset}px`;
-        mainScreen.style.top = `${topOffset}px`;
-    }
-
-    window.addEventListener("resize", scaleContent);
-    window.addEventListener("DOMContentLoaded", scaleContent);
 </script>
