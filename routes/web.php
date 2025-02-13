@@ -4,9 +4,10 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('menu');
+Route::get('/login', function () {
+    return view('login'); // Nezabudni vytvoriť resources/views/profile.blade.php
+})->name('login');
+
 
 Route::get('/menu', function () {
     return view('menu');
